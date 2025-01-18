@@ -856,8 +856,8 @@ private:
                 T* keys = _keys + begin;
                 P* values = _values + begin;
                 const int size = end - begin;
-                // const int BUILD_GAP_CNT = compute_gap_count(size);
-                const int BUILD_GAP_CNT = 5; //insert
+                const int BUILD_GAP_CNT = compute_gap_count(size);
+                // const int BUILD_GAP_CNT = 5; //insert
 
                 node->is_two = 0;
                 node->build_size = size;
