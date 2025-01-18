@@ -7,13 +7,6 @@
 #include <array>
 #include <immintrin.h>
 #include <sched.h>
-// #include <tbb/queuing_rw_mutex.h>
-// #include "tbb/spin_rw_mutex.h"
-// #include "tbb/spin_mutex.h"
-// #include "tbb/mutex.h"
-// #include "tbb/reader_writer_lock.h"
-// #include "tbb/cache_aligned_allocator.h"
-// #include "tbb/enumerable_thread_specific.h"
 
 namespace destool {
   
@@ -145,11 +138,6 @@ namespace destool {
     }
 
   };
-  // typedef tbb::spin_rw_mutex Alex_rw_mutex;
-  // typedef OptLock Alex_mutex;
-  // typedef Alex_rw_mutex::scoped_lock Alex_rw_lock;
-  // typedef tbb::spin_mutex Alex_strict_mutex;
-  // typedef Alex_strict_mutex::scoped_lock Alex_strict_lock;
 }
 
 #endif

@@ -510,35 +510,6 @@ class LDataNode : public LNode<T, P> {
     size = index;
   }
 
-  // void extract_keys_and_values_with_insertion(T* keys, P* values, int& size, const T& new_key, const P& new_value) const {
-  //   // 先把当前数据结构的所有内容复制到一个副本
-  //   std::vector<T> keys_copy;
-  //   std::vector<P> values_copy;
-  //   keys_copy.reserve(size);  // 预分配空间
-  //   values_copy.reserve(size);  // 预分配空间
-  //   for (const_iterator_type it(this,0); !it.is_end(); it++) {
-  //       keys_copy.push_back(it.key());
-  //       values_copy.push_back(it.payload());
-  //   }
-
-  //   auto insert_pos = std::lower_bound(keys_copy.begin(), keys_copy.end(), new_key);
-  //   int index = 0;
-  //   for (auto it = keys_copy.begin(); it != insert_pos; ++it, ++index) {
-  //       keys[index] = *it;
-  //       values[index] = values_copy[it - keys_copy.begin()];
-  //   }
-
-  //   keys[index] = new_key;
-  //   values[index] = new_value;
-  //   index++;
-
-  //   for (auto it = insert_pos; it != keys_copy.end(); ++it, ++index) {
-  //       keys[index] = *it;
-  //       values[index] = values_copy[it - keys_copy.begin()];
-  //   }
-  //   size = index;
-  // }
-
   /*** Cost model ***/
 
   // Empirical average number of shifts per insert
