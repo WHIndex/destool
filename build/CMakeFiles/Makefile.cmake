@@ -7,13 +7,13 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/wanghui/gre/desto/CMakeLists.txt"
+  "/home/wanghui/gre/destool/CMakeLists.txt"
   "CMakeFiles/3.31.4/CMakeCCompiler.cmake"
   "CMakeFiles/3.31.4/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.31.4/CMakeSystem.cmake"
-  "/home/wanghui/gre/desto/cmake/FindJeMalloc.cmake"
-  "/home/wanghui/gre/desto/cmake/FindMKL.cmake"
-  "/home/wanghui/gre/desto/cmake/FindTBB.cmake"
+  "/home/wanghui/gre/destool/cmake/FindJeMalloc.cmake"
+  "/home/wanghui/gre/destool/cmake/FindMKL.cmake"
+  "/home/wanghui/gre/destool/cmake/FindTBB.cmake"
   "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeCCompiler.cmake.in"
   "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeCCompilerABI.c"
   "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeCInformation.cmake"
@@ -146,5 +146,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/example_desto.dir/DependInfo.cmake"
+  "CMakeFiles/example_destool.dir/DependInfo.cmake"
   )

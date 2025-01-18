@@ -4,7 +4,7 @@
 # compile CXX with /opt/rh/devtoolset-9/root/usr/bin/g++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/opt/intel/mkl/include -I/home/wanghui/gre/desto/src/core
+CXX_INCLUDES = -I/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/include -I/usr/local/include -I/home/wanghui/gre/destool/src/core
 
 CXX_FLAGS =  -DMKL_ILP64 -m64 -O3 -DNDEBUG -std=gnu++17 -faligned-new -march=native -mavx2 -g -O3 -fopenmp
 

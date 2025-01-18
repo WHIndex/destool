@@ -57,10 +57,10 @@ RM = /var/lib/snapd/snap/cmake/1437/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wanghui/gre/desto
+CMAKE_SOURCE_DIR = /home/wanghui/gre/destool
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wanghui/gre/desto/build
+CMAKE_BINARY_DIR = /home/wanghui/gre/destool/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wanghui/gre/desto/build/CMakeFiles /home/wanghui/gre/desto/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wanghui/gre/destool/build/CMakeFiles /home/wanghui/gre/destool/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wanghui/gre/desto/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wanghui/gre/destool/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,41 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named example_desto
+# Target rules for targets named example_destool
 
 # Build rule for target.
-example_desto: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example_desto
-.PHONY : example_desto
+example_destool: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example_destool
+.PHONY : example_destool
 
 # fast build rule for target.
-example_desto/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_desto.dir/build.make CMakeFiles/example_desto.dir/build
-.PHONY : example_desto/fast
+example_destool/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_destool.dir/build.make CMakeFiles/example_destool.dir/build
+.PHONY : example_destool/fast
 
-src/examples/example_desto.o: src/examples/example_desto.cpp.o
-.PHONY : src/examples/example_desto.o
+src/examples/example_destool.o: src/examples/example_destool.cpp.o
+.PHONY : src/examples/example_destool.o
 
 # target to build an object file
-src/examples/example_desto.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_desto.dir/build.make CMakeFiles/example_desto.dir/src/examples/example_desto.cpp.o
-.PHONY : src/examples/example_desto.cpp.o
+src/examples/example_destool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_destool.dir/build.make CMakeFiles/example_destool.dir/src/examples/example_destool.cpp.o
+.PHONY : src/examples/example_destool.cpp.o
 
-src/examples/example_desto.i: src/examples/example_desto.cpp.i
-.PHONY : src/examples/example_desto.i
+src/examples/example_destool.i: src/examples/example_destool.cpp.i
+.PHONY : src/examples/example_destool.i
 
 # target to preprocess a source file
-src/examples/example_desto.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_desto.dir/build.make CMakeFiles/example_desto.dir/src/examples/example_desto.cpp.i
-.PHONY : src/examples/example_desto.cpp.i
+src/examples/example_destool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_destool.dir/build.make CMakeFiles/example_destool.dir/src/examples/example_destool.cpp.i
+.PHONY : src/examples/example_destool.cpp.i
 
-src/examples/example_desto.s: src/examples/example_desto.cpp.s
-.PHONY : src/examples/example_desto.s
+src/examples/example_destool.s: src/examples/example_destool.cpp.s
+.PHONY : src/examples/example_destool.s
 
 # target to generate assembly for a file
-src/examples/example_desto.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_desto.dir/build.make CMakeFiles/example_desto.dir/src/examples/example_desto.cpp.s
-.PHONY : src/examples/example_desto.cpp.s
+src/examples/example_destool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_destool.dir/build.make CMakeFiles/example_destool.dir/src/examples/example_destool.cpp.s
+.PHONY : src/examples/example_destool.cpp.s
 
 # Help Target
 help:
@@ -161,10 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... example_desto"
-	@echo "... src/examples/example_desto.o"
-	@echo "... src/examples/example_desto.i"
-	@echo "... src/examples/example_desto.s"
+	@echo "... example_destool"
+	@echo "... src/examples/example_destool.o"
+	@echo "... src/examples/example_destool.i"
+	@echo "... src/examples/example_destool.s"
 .PHONY : help
 
 

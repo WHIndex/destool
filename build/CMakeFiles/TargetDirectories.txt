@@ -1,3 +1,3 @@
-/home/wanghui/gre/desto/build/CMakeFiles/example_desto.dir
-/home/wanghui/gre/desto/build/CMakeFiles/edit_cache.dir
-/home/wanghui/gre/desto/build/CMakeFiles/rebuild_cache.dir
+/home/wanghui/gre/destool/build/CMakeFiles/example_destool.dir
+/home/wanghui/gre/destool/build/CMakeFiles/edit_cache.dir
+/home/wanghui/gre/destool/build/CMakeFiles/rebuild_cache.dir

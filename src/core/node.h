@@ -17,7 +17,7 @@
 
 #define USE_LZCNT 1
 
-namespace desto::lnode {
+namespace destool::lnode {
 
 template <class T, class P>
 class LNode {
@@ -69,6 +69,8 @@ class LDataNode : public LNode<T, P> {
 #else
   V* data_slots_ = nullptr;  // holds key-payload pairs
 #endif
+  uint32_t lock_ = 0;
+  uint32_t link_lock_ = 0;
 
   int data_capacity_ = 0;  // size of key/data_slots array
   int num_keys_ = 0;  // number of filled key/data slots (as opposed to gaps)
@@ -332,6 +334,88 @@ class LDataNode : public LNode<T, P> {
     return !key_less_(a, b) && !key_less_(b, a);
   }
 
+  /*** concurrency management **/
+  inline void get_lock() {
+    uint32_t new_value = 0;
+    uint32_t old_value = 0;
+    do {
+      while (true) {
+        old_value = __atomic_load_n(&lock_, __ATOMIC_ACQUIRE);
+        if (!(old_value & lockSet)) {
+          old_value &= lockMask;
+          break;
+        }
+      }
+      new_value = old_value | lockSet;
+    } while (!CAS(&lock_, &old_value, new_value));
+  }
+
+  inline bool try_get_lock() {
+    uint32_t v = __atomic_load_n(&lock_, __ATOMIC_ACQUIRE);
+    if (v & lockSet) {
+      return false;
+    }
+    auto old_value = v & lockMask;
+    auto new_value = v | lockSet;
+    return CAS(&lock_, &old_value, new_value);
+  }
+
+  inline void release_lock() {
+    uint32_t v = lock_;
+    __atomic_store_n(&lock_, v + 1 - lockSet, __ATOMIC_RELEASE);
+  }
+
+  /*if the lock is set, return true*/
+  inline bool test_lock_set(uint32_t &version) const {
+    version = __atomic_load_n(&lock_, __ATOMIC_ACQUIRE);
+    return (version & lockSet) != 0;
+  }
+
+  // test whether the version has change, if change, return true
+  inline bool test_lock_version_change(uint32_t old_version) const {
+    auto value = __atomic_load_n(&lock_, __ATOMIC_ACQUIRE);
+    return (old_version != value);
+  }
+
+  inline void get_link_lock() {
+    uint32_t new_value = 0;
+    uint32_t old_value = 0;
+    do {
+      while (true) {
+        old_value = __atomic_load_n(&link_lock_, __ATOMIC_ACQUIRE);
+        if (!(old_value & lockSet)) {
+          old_value &= lockMask;
+          break;
+        }
+      }
+      new_value = old_value | lockSet;
+    } while (!CAS(&link_lock_, &old_value, new_value));
+  }
+
+  inline bool try_get_link_lock() {
+    uint32_t new_value = 0;
+    uint32_t old_value = __atomic_load_n(&link_lock_, __ATOMIC_ACQUIRE);
+    if (old_value & lockSet)
+      return false;
+    old_value &= lockMask;
+    new_value = old_value | lockSet;
+    return CAS(&link_lock_, &old_value, new_value);
+  }
+
+  inline void release_link_lock() {
+    uint32_t v = link_lock_;
+    __atomic_store_n(&link_lock_, v & lockMask, __ATOMIC_RELEASE);
+  }
+
+  static void New_from_existing(void **ptr, self_type *old_node) {
+    align_zalloc(ptr, sizeof(self_type));
+    auto node_ptr = reinterpret_cast<self_type *>(*ptr);
+    memcpy(node_ptr, old_node, sizeof(self_type));
+    node_ptr->link_lock_ = 0;
+    node_ptr->key_slots_ = nullptr;
+    node_ptr->payload_slots_ = nullptr;
+  }
+
   /*** Iterator ***/
 
   // Forward iterator meant for iterating over a single data node.
@@ -416,34 +500,44 @@ class LDataNode : public LNode<T, P> {
 
   iterator_type begin() { return iterator_type(this, 0); }
 
-  void extract_keys_and_values_with_insertion(T* keys, P* values, int& size, const T& new_key, const P& new_value) const {
-    // 先把当前数据结构的所有内容复制到一个副本
-    std::vector<T> keys_copy;
-    std::vector<P> values_copy;
-    keys_copy.reserve(size);  // 预分配空间
-    values_copy.reserve(size);  // 预分配空间
-    for (const_iterator_type it(this,0); !it.is_end(); it++) {
-        keys_copy.push_back(it.key());
-        values_copy.push_back(it.payload());
-    }
-
-    auto insert_pos = std::lower_bound(keys_copy.begin(), keys_copy.end(), new_key);
+  void extract_keys_and_values(T* keys, P* values, int& size) const {
     int index = 0;
-    for (auto it = keys_copy.begin(); it != insert_pos; ++it, ++index) {
-        keys[index] = *it;
-        values[index] = values_copy[it - keys_copy.begin()];
-    }
-
-    keys[index] = new_key;
-    values[index] = new_value;
-    index++;
-
-    for (auto it = insert_pos; it != keys_copy.end(); ++it, ++index) {
-        keys[index] = *it;
-        values[index] = values_copy[it - keys_copy.begin()];
+    for (const_iterator_type it(this,0); !it.is_end(); it++) {
+      keys[index] = it.key();
+      values[index] = it.payload();
+      index++;
     }
     size = index;
   }
+
+  // void extract_keys_and_values_with_insertion(T* keys, P* values, int& size, const T& new_key, const P& new_value) const {
+  //   // 先把当前数据结构的所有内容复制到一个副本
+  //   std::vector<T> keys_copy;
+  //   std::vector<P> values_copy;
+  //   keys_copy.reserve(size);  // 预分配空间
+  //   values_copy.reserve(size);  // 预分配空间
+  //   for (const_iterator_type it(this,0); !it.is_end(); it++) {
+  //       keys_copy.push_back(it.key());
+  //       values_copy.push_back(it.payload());
+  //   }
+
+  //   auto insert_pos = std::lower_bound(keys_copy.begin(), keys_copy.end(), new_key);
+  //   int index = 0;
+  //   for (auto it = keys_copy.begin(); it != insert_pos; ++it, ++index) {
+  //       keys[index] = *it;
+  //       values[index] = values_copy[it - keys_copy.begin()];
+  //   }
+
+  //   keys[index] = new_key;
+  //   values[index] = new_value;
+  //   index++;
+
+  //   for (auto it = insert_pos; it != keys_copy.end(); ++it, ++index) {
+  //       keys[index] = *it;
+  //       values[index] = values_copy[it - keys_copy.begin()];
+  //   }
+  //   size = index;
+  // }
 
   /*** Cost model ***/
 
@@ -1253,6 +1347,50 @@ class LDataNode : public LNode<T, P> {
     }
   }
 
+    bool find_payload(const T &key, P *payload, bool *found) {
+                      uint32_t version;
+                      if (test_lock_set(
+                              version)) // Test whether the lock is set and record the version
+                        return false;
+    // num_lookups_++;
+    int predicted_pos = predict_position(key);
+    // The last key slot with a certain value is guaranteed to be a real key
+    // (instead of a gap)
+    int pos = exponential_search_upper_bound(predicted_pos, key) - 1;
+    if (!(pos < 0 || !key_equal(LDATA_NODE_KEY_AT(pos), key))) {
+      *payload = get_payload(pos);
+      *found = true;
+    } else {
+      *found = false;
+    }
+                          if (test_lock_version_change(
+                                  version)) // Test whether the version is changed or not
+                            return false;
+    return true;
+  }
+
+  bool wh_find_payload(const T &key, bool *found) {
+                      uint32_t version;
+                      if (test_lock_set(
+                              version)) // Test whether the lock is set and record the version
+                        return false;
+    // num_lookups_++;
+    int predicted_pos = predict_position(key);
+    // The last key slot with a certain value is guaranteed to be a real key
+    // (instead of a gap)
+    int pos = exponential_search_upper_bound(predicted_pos, key) - 1;
+    if (!(pos < 0 || !key_equal(LDATA_NODE_KEY_AT(pos), key))) {
+      P payload = get_payload(pos);
+      *found = true;
+    } else {
+      *found = true;
+    }
+                          if (test_lock_version_change(
+                                  version)) // Test whether the version is changed or not
+                            return false;
+    return true;
+  }
+
   // Searches for the first non-gap position no less than key
   // Returns position in range [0, data_capacity]
   // Compare with lower_bound()
@@ -1451,6 +1589,37 @@ class LDataNode : public LNode<T, P> {
     return l;
   }
 
+  inline int range_scan_by_size(const T &key, uint32_t to_scan, V *result) {
+  RETRY:
+    uint32_t version;
+    if (test_lock_set(version))
+      goto RETRY;
+
+    int predicted_pos = predict_position(key); // First locate this position
+
+    int pos = exponential_search_upper_bound(predicted_pos, key) - 1;
+    iterator_type iter = iterator_type(this, pos);
+    auto scanned = 0;
+
+    while (!iter.is_end() && scanned < to_scan) {
+      result[scanned] = *iter;
+      iter++;
+      scanned++;
+    }
+
+    if (test_lock_version_change(version))
+      goto RETRY;
+
+    auto next_leaf = this->next_leaf_;
+    if (scanned < to_scan && next_leaf) {
+      scanned += next_leaf->range_scan_by_size(
+          next_leaf->first_key(), to_scan - scanned, result + scanned);
+    }
+
+    return scanned;
+  }
+
+
   /*** Inserts and resizes ***/
 
   // Whether empirical cost deviates significantly from expected cost
@@ -1478,37 +1647,46 @@ class LDataNode : public LNode<T, P> {
   // Second value in returned pair is position of inserted key, or of the
   // already-existing key.
   // -1 if no insertion.
-  std::pair<int, int> insert(const T& key, const P& payload) {
-    // Periodically check for catastrophe
-    if (num_inserts_ % 64 == 0 && catastrophic_cost()) {
-      return {2, -1};
+  std::pair<int, int> insert(const T &key, const P &payload) {
+    // Try to get the exclusive lock
+    uint32_t lock_version;
+    if (!try_get_lock()) {
+      return {4, -1};
     }
 
-    // Check if node is full (based on expansion_threshold)
-    if (num_keys_ >= expansion_threshold_) {
-      if (significant_cost_deviation()) {
-        return {1, -1};
-      }
-      if (catastrophic_cost()) {
-        return {2, -1};
-      }
-      if (num_keys_ > max_slots_ * kMinDensity_) {
-        return {3, -1};
-      }
-      // Expand
-      bool keep_left = is_append_mostly_right();
-      bool keep_right = is_append_mostly_left();
-      resize(kMinDensity_, false, keep_left, keep_right);
-      num_resizes_++;
-    }
+    // // Periodically check for catastrophe
+    // if (num_inserts_ % 64 == 0 && catastrophic_cost()) {
+    //   return {2, -1};
+    // }
+
+    // // Check if node is full (based on expansion_threshold)
+    // if (num_keys_ >= expansion_threshold_) {
+    //   if (significant_cost_deviation()) {
+    //     return {1, -1};
+    //   }
+    //   if (catastrophic_cost()) {
+    //     return {2, -1};
+    //   }
+    //   if (num_keys_ > max_slots_ * kMinDensity_) {
+    //     return {3, -1};
+    //   }
+    //   // Expand
+    //   // bool keep_left = is_append_mostly_right();
+    //   // bool keep_right = is_append_mostly_left();
+    //   // resize(kMinDensity_, false, keep_left, keep_right);
+    //   // num_resizes_++;
+    //   return {5, -1};
+    // }
 
     // Insert
     std::pair<int, int> positions = find_insert_position(key);
     int upper_bound_pos = positions.second;
     if (!allow_duplicates && upper_bound_pos > 0 &&
         key_equal(LDATA_NODE_KEY_AT(upper_bound_pos - 1), key)) {
+      release_lock(); // If duplicate, release lock & return
       return {-1, upper_bound_pos - 1};
     }
+
     int insertion_position = positions.first;
     if (insertion_position < data_capacity_ &&
         !check_exists(insertion_position)) {
@@ -1529,6 +1707,32 @@ class LDataNode : public LNode<T, P> {
       min_key_ = key;
       num_left_out_of_bounds_inserts_++;
     }
+
+    // Periodically check for catastrophe
+    if (num_inserts_ % 64 == 0 && catastrophic_cost()) {
+      return {2, -1};
+    }
+
+    // Check if node is full (based on expansion_threshold)
+    if (num_keys_ >= expansion_threshold_) {
+      if (significant_cost_deviation()) {
+        return {1, -1};
+      }
+      if (catastrophic_cost()) {
+        return {2, -1};
+      }
+      if (num_keys_ > max_slots_ * kMinDensity_) {
+        return {3, -1};
+      }
+      // Expand
+      // bool keep_left = is_append_mostly_right();
+      // bool keep_right = is_append_mostly_left();
+      // resize(kMinDensity_, false, keep_left, keep_right);
+      // num_resizes_++;
+      return {5, -1};
+    }
+
+    release_lock(); // release lock & return
     return {0, insertion_position};
   }
 
@@ -1647,6 +1851,145 @@ class LDataNode : public LNode<T, P> {
     value_allocator().deallocate(data_slots_, data_capacity_);
 #endif
     bitmap_allocator().deallocate(bitmap_, bitmap_size_);
+
+    data_capacity_ = new_data_capacity;
+    bitmap_size_ = new_bitmap_size;
+#if LDATA_NODE_SEP_ARRAYS
+    key_slots_ = new_key_slots;
+    payload_slots_ = new_payload_slots;
+#else
+    data_slots_ = new_data_slots;
+#endif
+    bitmap_ = new_bitmap;
+
+    expansion_threshold_ =
+        std::min(std::max(data_capacity_ * kMaxDensity_,
+                          static_cast<double>(num_keys_ + 1)),
+                 static_cast<double>(data_capacity_));
+    contraction_threshold_ = data_capacity_ * kMinDensity_;
+  }
+
+  void resize_from_existing(self_type *old_node, double target_density,
+                            bool force_retrain = false, bool keep_left = false,
+                            bool keep_right = false) {
+
+    if (num_keys_ == 0) {
+      initialize(num_keys_, kMinDensity_);
+      expansion_threshold_ = data_capacity_;
+      contraction_threshold_ = 0;
+      return;
+    }
+
+    int new_data_capacity =
+        std::max(static_cast<int>(num_keys_ / target_density), num_keys_ + 1);
+    auto new_bitmap_size =
+        static_cast<size_t>(std::ceil(new_data_capacity / 64.));
+    auto new_bitmap = new (bitmap_allocator().allocate(new_bitmap_size))
+        uint64_t[new_bitmap_size](); // initialize to all false
+#if LDATA_NODE_SEP_ARRAYS
+    T *new_key_slots =
+        new (key_allocator().allocate(new_data_capacity)) T[new_data_capacity];
+    P *new_payload_slots = new (payload_allocator().allocate(new_data_capacity))
+        P[new_data_capacity];
+#else
+    V *new_data_slots = new (value_allocator().allocate(new_data_capacity))
+        V[new_data_capacity];
+#endif
+
+    // Retrain model if the number of keys is sufficiently small (under 50)
+    if (num_keys_ < 50 || force_retrain) {
+      const_iterator_type it(old_node, 0);
+      LinearModelBuilder<T> builder(&(this->model_));
+      for (int i = 0; it.cur_idx_ < data_capacity_ && !it.is_end(); it++, i++) {
+        builder.add(it.key(), i);
+      }
+      builder.build();
+      if (keep_left) {
+        this->model_.expand(static_cast<double>(data_capacity_) / num_keys_);
+      } else if (keep_right) {
+        this->model_.expand(static_cast<double>(data_capacity_) / num_keys_);
+        this->model_.b_ += (new_data_capacity - data_capacity_);
+      } else {
+        this->model_.expand(static_cast<double>(new_data_capacity) / num_keys_);
+      }
+    } else {
+      if (keep_right) {
+        this->model_.b_ += (new_data_capacity - data_capacity_);
+      } else if (!keep_left) {
+        this->model_.expand(static_cast<double>(new_data_capacity) /
+                            data_capacity_);
+      }
+    }
+
+    int last_position = -1;
+    int keys_remaining = num_keys_;
+    const_iterator_type it(old_node, 0);
+    for (; it.cur_idx_ < data_capacity_ && !it.is_end(); it++) {
+      int position = this->model_.predict(it.key());
+      position = std::max<int>(position, last_position + 1);
+
+      int positions_remaining = new_data_capacity - position;
+      if (positions_remaining < keys_remaining) {
+        // fill the rest of the store contiguously
+        int pos = new_data_capacity - keys_remaining;
+        for (int j = last_position + 1; j < pos; j++) {
+#if LDATA_NODE_SEP_ARRAYS
+          new_key_slots[j] = it.key();
+#else
+          new_data_slots[j].first = it.key();
+#endif
+        }
+        for (; pos < new_data_capacity; pos++, it++) {
+#if LDATA_NODE_SEP_ARRAYS
+          new_key_slots[pos] = it.key();
+          new_payload_slots[pos] = it.payload();
+#else
+          new_data_slots[pos] = *it;
+#endif
+          set_bit(new_bitmap, pos);
+        }
+        last_position = pos - 1;
+        break;
+      }
+
+      for (int j = last_position + 1; j < position; j++) {
+#if LDATA_NODE_SEP_ARRAYS
+        new_key_slots[j] = it.key();
+#else
+        new_data_slots[j].first = it.key();
+#endif
+      }
+
+#if LDATA_NODE_SEP_ARRAYS
+      new_key_slots[position] = it.key();
+      new_payload_slots[position] = it.payload();
+#else
+      new_data_slots[position] = *it;
+#endif
+      set_bit(new_bitmap, position);
+
+      last_position = position;
+
+      keys_remaining--;
+    }
+
+    for (int i = last_position + 1; i < new_data_capacity; i++) {
+#if LDATA_NODE_SEP_ARRAYS
+      new_key_slots[i] = kEndSentinel_;
+#else
+      new_data_slots[i].first = kEndSentinel;
+#endif
+    }
+
+    /*
+    #if LDATA_NODE_SEP_ARRAYS
+        key_allocator().deallocate(key_slots_, data_capacity_);
+        payload_allocator().deallocate(payload_slots_, data_capacity_);
+    #else
+        value_allocator().deallocate(data_slots_, data_capacity_);
+    #endif
+        bitmap_allocator().deallocate(bitmap_, bitmap_size_);
+    */
 
     data_capacity_ = new_data_capacity;
     bitmap_size_ = new_bitmap_size;

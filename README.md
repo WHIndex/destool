@@ -1,9 +1,9 @@
-# DESTO (Updating)
+# DESTOOL (Updating)
 
 
 Thanks for all of you for your interest in our work.
 
-This project contains the code of DESTO and welcomes contributions or suggestions.
+This project contains the code of DESTOOL and welcomes contributions or suggestions.
 
 ## Compile & Run
 
@@ -17,13 +17,13 @@ make
 - Run example:
 
 ```bash
-./build/example_desto
+./build/example_destool
 ```
 
 
 ## Usage
 
-`src/examples/example_desto.cpp` demonstrates the usage of DESTO:
+`src/examples/example_destool.cpp` demonstrates the usage of DESTO:
 
 
 ```bash
@@ -33,20 +33,20 @@ make
 using namespace std;
 
 int main() {
-  desto::LIPP <int, int> desto;
+  destool::LIPP <int, int> destool;
   int key_num = 1000;
   pair<int, int> *keys = new pair<int, int>[key_num];
   for (int i = 0; i < 1000; i++) {
     keys[i]={i,i};
   }
-  desto.bulk_load(keys, 1000);
+  destool.bulk_load(keys, 1000);
 
   for (int i = 1000; i < 2000; i++) {
-    desto.insert(i,i);
+    destool.insert(i,i);
   }
   for (int i = 0; i < 2000; i++) {
     bool exist;
-    auto result = desto.at(i, false, exist);
+    auto result = destool.at(i, false, exist);
     if (exist) {
         std::cout << "value at " << i << ": " << result << std::endl;
     } else {
@@ -61,7 +61,7 @@ int main() {
 ## Running benchmark
 
 
-DESTO's performance can be assessed using the GRE benchmarking tool. We have integrated DESTO into GRE as "[GRE_DESTO](https://github.com/WangHui025/GRE_DESTO)", which is a fork of GRE. In GRE_DESTO, you can assess the performance of DESTO comprehensively.
+DESTOOL's performance can be assessed using the GRE benchmarking tool. We have integrated DESTOOL into GRE as "[GRE_DESTOOL](https://github.com/WangHui025/GRE_DESTO)", which is a fork of GRE. In GRE_DESTOOL, you can assess the performance of DESTOOL comprehensively.
 
 
 ## License

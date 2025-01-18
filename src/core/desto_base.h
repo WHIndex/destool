@@ -1,12 +1,12 @@
-#ifndef __DESTO_BASE_H__
-#define __DESTO_BASE_H__
+#ifndef __DESTOOL_BASE_H__
+#define __DESTOOL_BASE_H__
 
 #include <limits>
 #include <cmath>
 #include <cstdlib>
 #include <algorithm>
 
-namespace desto {
+namespace destool {
 
 // Linear regression model
 template <class T>
@@ -31,6 +31,6 @@ public:
     }
 };
 
-#endif // __DESTO_BASE_H__
+#endif // __DESTOOL_BASE_H__
 
 }
