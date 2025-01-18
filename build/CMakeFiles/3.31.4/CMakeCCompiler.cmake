@@ -75,7 +75,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/include;/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/include;/usr/local/include;/opt/rh/devtoolset-9/root/usr/include;/usr/include")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/include;/usr/local/include;/opt/rh/devtoolset-9/root/usr/include;/usr/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "gcc;gcc_s;c;gcc;gcc_s")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9;/opt/rh/devtoolset-9/root/usr/lib64;/lib64;/usr/lib64;/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin;/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin;/opt/rh/devtoolset-9/root/usr/lib")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9;/opt/rh/devtoolset-9/root/usr/lib64;/lib64;/usr/lib64;/opt/rh/devtoolset-9/root/usr/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

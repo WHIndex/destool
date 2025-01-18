@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /var/lib/snapd/snap/cmake/1425/bin/cmake
+CMAKE_COMMAND = /var/lib/snapd/snap/cmake/1437/bin/cmake
 
 # The command to remove a file.
-RM = /var/lib/snapd/snap/cmake/1425/bin/cmake -E rm -f
+RM = /var/lib/snapd/snap/cmake/1437/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wanghui/gre/lial
+CMAKE_SOURCE_DIR = /home/wanghui/gre/desto
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wanghui/gre/lial/build
+CMAKE_BINARY_DIR = /home/wanghui/gre/desto/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/wanghui/gre/lial/build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
-	/var/lib/snapd/snap/cmake/1425/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/var/lib/snapd/snap/cmake/1437/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/var/lib/snapd/snap/cmake/1425/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/var/lib/snapd/snap/cmake/1437/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wanghui/gre/lial/build/CMakeFiles /home/wanghui/gre/lial/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wanghui/gre/desto/build/CMakeFiles /home/wanghui/gre/desto/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wanghui/gre/lial/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wanghui/gre/desto/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,41 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named example_lial
+# Target rules for targets named example_desto
 
 # Build rule for target.
-example_lial: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example_lial
-.PHONY : example_lial
+example_desto: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example_desto
+.PHONY : example_desto
 
 # fast build rule for target.
-example_lial/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_lial.dir/build.make CMakeFiles/example_lial.dir/build
-.PHONY : example_lial/fast
+example_desto/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_desto.dir/build.make CMakeFiles/example_desto.dir/build
+.PHONY : example_desto/fast
 
-src/examples/example_lial.o: src/examples/example_lial.cpp.o
-.PHONY : src/examples/example_lial.o
+src/examples/example_desto.o: src/examples/example_desto.cpp.o
+.PHONY : src/examples/example_desto.o
 
 # target to build an object file
-src/examples/example_lial.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_lial.dir/build.make CMakeFiles/example_lial.dir/src/examples/example_lial.cpp.o
-.PHONY : src/examples/example_lial.cpp.o
+src/examples/example_desto.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_desto.dir/build.make CMakeFiles/example_desto.dir/src/examples/example_desto.cpp.o
+.PHONY : src/examples/example_desto.cpp.o
 
-src/examples/example_lial.i: src/examples/example_lial.cpp.i
-.PHONY : src/examples/example_lial.i
+src/examples/example_desto.i: src/examples/example_desto.cpp.i
+.PHONY : src/examples/example_desto.i
 
 # target to preprocess a source file
-src/examples/example_lial.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_lial.dir/build.make CMakeFiles/example_lial.dir/src/examples/example_lial.cpp.i
-.PHONY : src/examples/example_lial.cpp.i
+src/examples/example_desto.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_desto.dir/build.make CMakeFiles/example_desto.dir/src/examples/example_desto.cpp.i
+.PHONY : src/examples/example_desto.cpp.i
 
-src/examples/example_lial.s: src/examples/example_lial.cpp.s
-.PHONY : src/examples/example_lial.s
+src/examples/example_desto.s: src/examples/example_desto.cpp.s
+.PHONY : src/examples/example_desto.s
 
 # target to generate assembly for a file
-src/examples/example_lial.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_lial.dir/build.make CMakeFiles/example_lial.dir/src/examples/example_lial.cpp.s
-.PHONY : src/examples/example_lial.cpp.s
+src/examples/example_desto.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_desto.dir/build.make CMakeFiles/example_desto.dir/src/examples/example_desto.cpp.s
+.PHONY : src/examples/example_desto.cpp.s
 
 # Help Target
 help:
@@ -161,10 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... example_lial"
-	@echo "... src/examples/example_lial.o"
-	@echo "... src/examples/example_lial.i"
-	@echo "... src/examples/example_lial.s"
+	@echo "... example_desto"
+	@echo "... src/examples/example_desto.o"
+	@echo "... src/examples/example_desto.i"
+	@echo "... src/examples/example_desto.s"
 .PHONY : help
 
 

@@ -45,29 +45,29 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /var/lib/snapd/snap/cmake/1425/bin/cmake
+CMAKE_COMMAND = /var/lib/snapd/snap/cmake/1437/bin/cmake
 
 # The command to remove a file.
-RM = /var/lib/snapd/snap/cmake/1425/bin/cmake -E rm -f
+RM = /var/lib/snapd/snap/cmake/1437/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wanghui/gre/lial
+CMAKE_SOURCE_DIR = /home/wanghui/gre/desto
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wanghui/gre/lial/build
+CMAKE_BINARY_DIR = /home/wanghui/gre/desto/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/example_lial.dir/all
+all: CMakeFiles/example_desto.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/example_lial.dir/codegen
+codegen: CMakeFiles/example_desto.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,39 +75,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/example_lial.dir/clean
+clean: CMakeFiles/example_desto.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/example_lial.dir
+# Target rules for target CMakeFiles/example_desto.dir
 
 # All Build rule for target.
-CMakeFiles/example_lial.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_lial.dir/build.make CMakeFiles/example_lial.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_lial.dir/build.make CMakeFiles/example_lial.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wanghui/gre/lial/build/CMakeFiles --progress-num=1,2 "Built target example_lial"
-.PHONY : CMakeFiles/example_lial.dir/all
+CMakeFiles/example_desto.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_desto.dir/build.make CMakeFiles/example_desto.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_desto.dir/build.make CMakeFiles/example_desto.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wanghui/gre/desto/build/CMakeFiles --progress-num=1,2 "Built target example_desto"
+.PHONY : CMakeFiles/example_desto.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/example_lial.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wanghui/gre/lial/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/example_lial.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wanghui/gre/lial/build/CMakeFiles 0
-.PHONY : CMakeFiles/example_lial.dir/rule
+CMakeFiles/example_desto.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wanghui/gre/desto/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/example_desto.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wanghui/gre/desto/build/CMakeFiles 0
+.PHONY : CMakeFiles/example_desto.dir/rule
 
 # Convenience name for target.
-example_lial: CMakeFiles/example_lial.dir/rule
-.PHONY : example_lial
+example_desto: CMakeFiles/example_desto.dir/rule
+.PHONY : example_desto
 
 # codegen rule for target.
-CMakeFiles/example_lial.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_lial.dir/build.make CMakeFiles/example_lial.dir/codegen
-.PHONY : CMakeFiles/example_lial.dir/codegen
+CMakeFiles/example_desto.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_desto.dir/build.make CMakeFiles/example_desto.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wanghui/gre/desto/build/CMakeFiles --progress-num=1,2 "Finished codegen for target example_desto"
+.PHONY : CMakeFiles/example_desto.dir/codegen
 
 # clean rule for target.
-CMakeFiles/example_lial.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_lial.dir/build.make CMakeFiles/example_lial.dir/clean
-.PHONY : CMakeFiles/example_lial.dir/clean
+CMakeFiles/example_desto.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_desto.dir/build.make CMakeFiles/example_desto.dir/clean
+.PHONY : CMakeFiles/example_desto.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

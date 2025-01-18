@@ -1,13 +1,3 @@
-// Copyright (c) Microsoft Corporation.
-// Licensed under the MIT license.
-
-/* This file contains the classes for linear models and model builders, helpers
- * for the bitmap,
- * cost model weights, statistic accumulators for collecting cost model
- * statistics,
- * and other miscellaneous functions
- */
-
 #pragma once
 
 #include <algorithm>
@@ -51,7 +41,7 @@ typedef unsigned __int32 uint32_t;
 #define forceinline inline
 #endif
 
-namespace lial::alex {
+namespace desto::lnode {
 
 /*** Linear model and model builder ***/
 
@@ -146,7 +136,7 @@ class LinearModelBuilder {
 
 /*** Comparison ***/
 
-struct AlexCompare {
+struct NodeCompare {
   template <class T1, class T2>
   bool operator()(const T1& x, const T2& y) const {
     static_assert(

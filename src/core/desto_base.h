@@ -1,12 +1,12 @@
-#ifndef __LIAL_BASE_H__
-#define __LIAL_BASE_H__
+#ifndef __DESTO_BASE_H__
+#define __DESTO_BASE_H__
 
 #include <limits>
 #include <cmath>
 #include <cstdlib>
 #include <algorithm>
 
-namespace lial {
+namespace desto {
 
 // Linear regression model
 template <class T>
@@ -31,6 +31,6 @@ public:
     }
 };
 
-#endif // __LIAL_BASE_H__
+#endif // __DESTO_BASE_H__
 
 }

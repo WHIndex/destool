@@ -1,5 +1,5 @@
-CMakeFiles/example_lial.dir/src/examples/example_lial.cpp.o: \
- /home/wanghui/gre/lial/src/examples/example_lial.cpp \
+CMakeFiles/example_desto.dir/src/examples/example_desto.cpp.o: \
+ /home/wanghui/gre/desto/src/examples/example_desto.cpp \
  /usr/include/stdc-predef.h \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/iostream \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/x86_64-redhat-linux/bits/c++config.h \
@@ -119,8 +119,8 @@ CMakeFiles/example_lial.dir/src/examples/example_lial.cpp.o: \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/ostream.tcc \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/istream \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/istream.tcc \
- /home/wanghui/gre/lial/src/core/lial.h \
- /home/wanghui/gre/lial/src/core/lial_base.h \
+ /home/wanghui/gre/desto/src/core/desto.h \
+ /home/wanghui/gre/desto/src/core/desto_base.h \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/cmath /usr/include/math.h \
  /usr/include/bits/huge_val.h /usr/include/bits/huge_valf.h \
  /usr/include/bits/huge_vall.h /usr/include/bits/inf.h \
@@ -171,8 +171,8 @@ CMakeFiles/example_lial.dir/src/examples/example_lial.cpp.o: \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/stl_bvector.h \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/vector.tcc \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/pstl/execution_defs.h \
- /home/wanghui/gre/lial/src/core/alex_nodes.h \
- /home/wanghui/gre/lial/src/core/alex_base.h \
+ /home/wanghui/gre/desto/src/core/node.h \
+ /home/wanghui/gre/desto/src/core/leaf_base.h \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/chrono \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/ratio \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/ctime \
@@ -287,7 +287,7 @@ CMakeFiles/example_lial.dir/src/examples/example_lial.cpp.o: \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/sstream.tcc \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/unordered_set \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/unordered_set.h \
- /home/wanghui/gre/lial/src/core/piecewise_linear_model.hpp \
+ /home/wanghui/gre/desto/src/core/piecewise_linear_model.hpp \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/cstddef \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/iterator \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/stream_iterator.h \
