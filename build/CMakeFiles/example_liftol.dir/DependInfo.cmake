@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/wanghui/gre/destool/src/examples/example_destool.cpp" "CMakeFiles/example_destool.dir/src/examples/example_destool.cpp.o" "gcc" "CMakeFiles/example_destool.dir/src/examples/example_destool.cpp.o.d"
+  "/home/wanghui/gre/liftol/src/examples/example_liftol.cpp" "CMakeFiles/example_liftol.dir/src/examples/example_liftol.cpp.o" "gcc" "CMakeFiles/example_liftol.dir/src/examples/example_liftol.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -18,7 +18,7 @@
 #define omp_get_max_threads() 1
 #endif
 
-namespace destool::internal {
+namespace liftol::internal {
 
 template<typename T>
 using LargeSigned = typename std::conditional_t<std::is_floating_point_v<T>,
@@ -267,7 +267,7 @@ std::vector<KEY_TYPE> segment_linear_optimal_model_fk(
     std::vector<KEY_TYPE> segment_first_keys;
     
     // 初始化最优线性分段模型，使用给定的 epsilon 值
-    typename destool::internal::OptimalPiecewiseLinearModel<KEY_TYPE, size_t> opt_model(static_cast<size_t>(epsilon));
+    typename liftol::internal::OptimalPiecewiseLinearModel<KEY_TYPE, size_t> opt_model(static_cast<size_t>(epsilon));
     
     // 临时保存段内数据
     std::vector<std::pair<KEY_TYPE, data_type>> segment_data;
@@ -322,7 +322,7 @@ std::vector<std::pair<KEY_TYPE, data_type>> segment_linear_optimal_model_fk_valu
     std::vector<std::pair<KEY_TYPE, data_type>> segment_first_keys;
 
     // 初始化最优线性分段模型，使用给定的 epsilon 值
-    typename destool::internal::OptimalPiecewiseLinearModel<KEY_TYPE, size_t> opt_model(static_cast<size_t>(epsilon));
+    typename liftol::internal::OptimalPiecewiseLinearModel<KEY_TYPE, size_t> opt_model(static_cast<size_t>(epsilon));
     
     // 临时保存段内数据
     std::vector<std::pair<KEY_TYPE, data_type>> segment_data;

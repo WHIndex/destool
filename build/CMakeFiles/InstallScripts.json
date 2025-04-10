@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/wanghui/gre/liftol/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

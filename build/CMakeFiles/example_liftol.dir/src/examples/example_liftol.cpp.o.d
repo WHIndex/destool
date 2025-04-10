@@ -1,5 +1,5 @@
-CMakeFiles/example_destool.dir/src/examples/example_destool.cpp.o: \
- /home/wanghui/gre/destool/src/examples/example_destool.cpp \
+CMakeFiles/example_liftol.dir/src/examples/example_liftol.cpp.o: \
+ /home/wanghui/gre/liftol/src/examples/example_liftol.cpp \
  /usr/include/stdc-predef.h \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/iostream \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/x86_64-redhat-linux/bits/c++config.h \
@@ -119,8 +119,8 @@ CMakeFiles/example_destool.dir/src/examples/example_destool.cpp.o: \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/ostream.tcc \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/istream \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/istream.tcc \
- /home/wanghui/gre/destool/src/core/desto.h \
- /home/wanghui/gre/destool/src/core/concurrency.h \
+ /home/wanghui/gre/liftol/src/core/lift.h \
+ /home/wanghui/gre/liftol/src/core/concurrency.h \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/atomic \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/atomic_base.h \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/atomic_lockfree_defines.h \
@@ -191,7 +191,7 @@ CMakeFiles/example_destool.dir/src/examples/example_destool.cpp.o: \
  /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/include/clflushoptintrin.h \
  /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/include/wbnoinvdintrin.h \
  /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/include/pkuintrin.h \
- /home/wanghui/gre/destool/src/core/desto_base.h \
+ /home/wanghui/gre/liftol/src/core/lift_base.h \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/cmath /usr/include/math.h \
  /usr/include/bits/huge_val.h /usr/include/bits/huge_valf.h \
  /usr/include/bits/huge_vall.h /usr/include/bits/inf.h \
@@ -239,8 +239,8 @@ CMakeFiles/example_destool.dir/src/examples/example_destool.cpp.o: \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/stl_bvector.h \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/vector.tcc \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/pstl/execution_defs.h \
- /home/wanghui/gre/destool/src/core/node.h \
- /home/wanghui/gre/destool/src/core/leaf_base.h \
+ /home/wanghui/gre/liftol/src/core/node.h \
+ /home/wanghui/gre/liftol/src/core/leaf_base.h \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/chrono \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/ratio \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/ctime \
@@ -279,7 +279,7 @@ CMakeFiles/example_destool.dir/src/examples/example_destool.cpp.o: \
  /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/include/clzerointrin.h \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/bitset \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/cassert \
- /usr/include/assert.h /home/wanghui/gre/destool/src/core/util.h \
+ /usr/include/assert.h /home/wanghui/gre/liftol/src/core/util.h \
  /usr/include/sys/stat.h /usr/include/bits/stat.h \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/math.h \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/stack \
@@ -347,4 +347,4 @@ CMakeFiles/example_destool.dir/src/examples/example_destool.cpp.o: \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/list \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/stl_list.h \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/list.tcc \
- /home/wanghui/gre/destool/src/core/piecewise_linear_model.hpp
+ /home/wanghui/gre/liftol/src/core/piecewise_linear_model.hpp

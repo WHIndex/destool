@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 3.14)
-project (destool)
+project (liftol)
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
 
 include(FetchContent)
@@ -28,8 +28,8 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src/core)
 add_compile_options(-faligned-new -march=native -mavx2 -g -O3)
 
 
-add_executable(example_destool
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/examples/example_destool.cpp
+add_executable(example_liftol
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/examples/example_liftol.cpp
     )
 
-target_link_libraries(example_destool PUBLIC OpenMP::OpenMP_CXX ${JEMALLOC_LIBRARIES} ${MKL_LIBRARIES} ${TBB_LIBRARIES})
+target_link_libraries(example_liftol PUBLIC OpenMP::OpenMP_CXX ${JEMALLOC_LIBRARIES} ${MKL_LIBRARIES} ${TBB_LIBRARIES})

@@ -51,7 +51,7 @@ typedef unsigned __int32 uint32_t;
 
 #include "util.h"
 
-namespace destool::lnode {
+namespace liftol::lnode {
 
 const uint32_t lockSet = ((uint32_t)1 << 31);
 const uint32_t lockMask = ((uint32_t)1 << 31) - 1;

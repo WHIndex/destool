@@ -1,8 +1,8 @@
-#ifndef __DESTOOL_H__
-#define __DESTOOL_H__
+#ifndef __LIFTOL_H__
+#define __LIFTOL_H__
 
 #include "concurrency.h"
-#include "desto_base.h"
+#include "lift_base.h"
 #include "node.h"
 #include <stdint.h>
 #include <math.h>
@@ -26,7 +26,7 @@
 
 #include "piecewise_linear_model.hpp"
 
-namespace destool {
+namespace liftol {
 
 // runtime assert
 #define RT_ASSERT(expr)                                                        \
@@ -1622,8 +1622,8 @@ private:
         for (int i = 0; i < _size; ++i) {
             key_value.emplace_back(_keys[i], _values[i]);
         }
-        // first_keys = destool::internal::segment_linear_optimal_model_fk(key_value, _size, 64);
-        fk_values = destool::internal::segment_linear_optimal_model_fk_value(key_value, _size, 64);
+        // first_keys = liftol::internal::segment_linear_optimal_model_fk(key_value, _size, 64);
+        fk_values = liftol::internal::segment_linear_optimal_model_fk_value(key_value, _size, 64);
         int fk_size = fk_values.size();
         std::vector<T> first_keys(fk_size);
         for (size_t i = 0; i < fk_size; ++i) {
@@ -2079,6 +2079,6 @@ private:
 
 };
 
-#endif // __DESTOOL_H__
+#endif // __LIFTOL_H__
 
 }

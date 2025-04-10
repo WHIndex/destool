@@ -1,4 +1,4 @@
-set(CMAKE_CXX_COMPILER "/opt/rh/devtoolset-9/root/usr/bin/g++")
+set(CMAKE_CXX_COMPILER "/opt/rh/devtoolset-9/root/usr/bin/c++")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_COMPILER_VERSION "9.3.1")
@@ -58,7 +58,9 @@ endforeach()
 
 set(CMAKE_CXX_LINKER_PREFERENCE 30)
 set(CMAKE_CXX_LINKER_PREFERENCE_PROPAGATES 1)
-set(CMAKE_CXX_LINKER_DEPFILE_SUPPORTED )
+set(CMAKE_CXX_LINKER_DEPFILE_SUPPORTED FALSE)
+set(CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED TRUE)
+set(CMAKE_CXX_LINKER_PUSHPOP_STATE_SUPPORTED TRUE)
 
 # Save compiler ABI information.
 set(CMAKE_CXX_SIZEOF_DATA_PTR "8")
@@ -87,9 +89,9 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/include;/opt/rh/devtoolset-9/root/usr/include/c++/9;/opt/rh/devtoolset-9/root/usr/include/c++/9/x86_64-redhat-linux;/opt/rh/devtoolset-9/root/usr/include/c++/9/backward;/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/include;/usr/local/include;/opt/rh/devtoolset-9/root/usr/include;/usr/include")
+set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/opt/rh/devtoolset-9/root/usr/include/c++/9;/opt/rh/devtoolset-9/root/usr/include/c++/9/x86_64-redhat-linux;/opt/rh/devtoolset-9/root/usr/include/c++/9/backward;/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/include;/usr/local/include;/opt/rh/devtoolset-9/root/usr/include;/usr/include")
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;m;gcc_s;gcc;c;gcc_s;gcc")
-set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9;/opt/rh/devtoolset-9/root/usr/lib64;/lib64;/usr/lib64;/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin;/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin;/opt/rh/devtoolset-9/root/usr/lib")
+set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9;/opt/rh/devtoolset-9/root/usr/lib64;/lib64;/usr/lib64;/opt/rh/devtoolset-9/root/usr/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
 set(CMAKE_CXX_COMPILER_CLANG_RESOURCE_DIR "")
 

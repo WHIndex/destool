@@ -4,20 +4,20 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeDetermineSystem.cmake:205 (message)"
       - "CMakeLists.txt:2 (project)"
     message: |
       The system is: Linux - 3.10.0-1160.118.1.el7.x86_64 - x86_64
   -
     kind: "message-v1"
     backtrace:
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler: /opt/rh/devtoolset-9/root/usr/bin/gcc 
+      Compiler: /opt/rh/devtoolset-9/root/usr/bin/cc 
       Build flags: 
       Id flags:  
       
@@ -28,18 +28,18 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
       
       The C compiler identification is GNU, found in:
-        /home/wanghui/gre/destool/build/CMakeFiles/3.31.4/CompilerIdC/a.out
+        /home/wanghui/gre/liftol/build/CMakeFiles/4.0.0/CompilerIdC/a.out
       
   -
     kind: "message-v1"
     backtrace:
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-      Compiler: /opt/rh/devtoolset-9/root/usr/bin/g++ 
+      Compiler: /opt/rh/devtoolset-9/root/usr/bin/c++ 
       Build flags: 
       Id flags:  
       
@@ -50,19 +50,19 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
       
       The CXX compiler identification is GNU, found in:
-        /home/wanghui/gre/destool/build/CMakeFiles/3.31.4/CompilerIdCXX/a.out
+        /home/wanghui/gre/liftol/build/CMakeFiles/4.0.0/CompilerIdCXX/a.out
       
   -
     kind: "try_compile-v1"
     backtrace:
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-gPnYL8"
-      binary: "/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-gPnYL8"
+      source: "/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-SoMPkJ"
+      binary: "/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-SoMPkJ"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -71,38 +71,29 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-gPnYL8'
+        Change Dir: '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-SoMPkJ'
         
-        Run Build Command(s): /var/lib/snapd/snap/cmake/1437/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-9/root/usr/bin/gmake -f Makefile cmTC_735ea/fast
-        /opt/rh/devtoolset-9/root/usr/bin/gmake  -f CMakeFiles/cmTC_735ea.dir/build.make CMakeFiles/cmTC_735ea.dir/build
-        gmake[1]: Entering directory '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-gPnYL8'
-        Building C object CMakeFiles/cmTC_735ea.dir/CMakeCCompilerABI.c.o
-        /opt/rh/devtoolset-9/root/usr/bin/gcc   -v -o CMakeFiles/cmTC_735ea.dir/CMakeCCompilerABI.c.o -c /var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /var/lib/snapd/snap/cmake/1457/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-9/root/usr/bin/gmake -f Makefile cmTC_fb729/fast
+        /opt/rh/devtoolset-9/root/usr/bin/gmake  -f CMakeFiles/cmTC_fb729.dir/build.make CMakeFiles/cmTC_fb729.dir/build
+        gmake[1]: Entering directory '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-SoMPkJ'
+        Building C object CMakeFiles/cmTC_fb729.dir/CMakeCCompilerABI.c.o
+        /opt/rh/devtoolset-9/root/usr/bin/cc   -v -o CMakeFiles/cmTC_fb729.dir/CMakeCCompilerABI.c.o -c /var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeCCompilerABI.c
         Using built-in specs.
-        COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/gcc
+        COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/cc
         Target: x86_64-redhat-linux
         Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-9/root/usr --mandir=/opt/rh/devtoolset-9/root/usr/share/man --infodir=/opt/rh/devtoolset-9/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --with-default-libstdcxx-abi=gcc4-compatible --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-9.3.1-20200408/obj-x86_64-redhat-linux/isl-install --disable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
         Thread model: posix
         gcc version 9.3.1 20200408 (Red Hat 9.3.1-2) (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_735ea.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
-         /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/cc1 -quiet -v /var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_735ea.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccWUOoPt.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fb729.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+         /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/cc1 -quiet -v /var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_fb729.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccheE7MQ.s
         GNU C17 (GCC) version 9.3.1 20200408 (Red Hat 9.3.1-2) (x86_64-redhat-linux)
         	compiled by GNU C version 9.3.1 20200408 (Red Hat 9.3.1-2), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version isl-0.16.1-GMP
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         ignoring nonexistent directory "/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/include-fixed"
         ignoring nonexistent directory "/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../x86_64-redhat-linux/include"
-        ignoring duplicate directory "/usr/local/include"
-          as it is a non-system directory that duplicates a system directory
-        ignoring duplicate directory "/usr/local/include"
-          as it is a non-system directory that duplicates a system directory
-        ignoring duplicate directory "/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/include"
-        ignoring duplicate directory "/usr/local/include"
-          as it is a non-system directory that duplicates a system directory
-        ignoring duplicate directory "/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/include"
         #include "..." search starts here:
         #include <...> search starts here:
-         /opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/include
          /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/include
          /usr/local/include
          /opt/rh/devtoolset-9/root/usr/include
@@ -113,99 +104,88 @@ events:
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: 9052cf03d8b774674ae408635cd5eca1
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_735ea.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
-         /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/as -v --64 -o CMakeFiles/cmTC_735ea.dir/CMakeCCompilerABI.c.o /tmp/ccWUOoPt.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fb729.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+         /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/as -v --64 -o CMakeFiles/cmTC_fb729.dir/CMakeCCompilerABI.c.o /tmp/ccheE7MQ.s
         GNU assembler version 2.32 (x86_64-redhat-linux) using BFD version version 2.32-16.el7
         COMPILER_PATH=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/
-        LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_735ea.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
-        Linking C executable cmTC_735ea
-        /var/lib/snapd/snap/cmake/1437/bin/cmake -E cmake_link_script CMakeFiles/cmTC_735ea.dir/link.txt --verbose=1
+        LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fb729.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+        Linking C executable cmTC_fb729
+        /var/lib/snapd/snap/cmake/1457/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fb729.dir/link.txt --verbose=1
         Using built-in specs.
-        COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/gcc
+        COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/cc
         COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper
         Target: x86_64-redhat-linux
         Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-9/root/usr --mandir=/opt/rh/devtoolset-9/root/usr/share/man --infodir=/opt/rh/devtoolset-9/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --with-default-libstdcxx-abi=gcc4-compatible --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-9.3.1-20200408/obj-x86_64-redhat-linux/isl-install --disable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
         Thread model: posix
         gcc version 9.3.1 20200408 (Red Hat 9.3.1-2) (GCC) 
         COMPILER_PATH=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/
-        LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_735ea' '-mtune=generic' '-march=x86-64'
-         /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccdRZBBy.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_735ea /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. -v CMakeFiles/cmTC_735ea.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o
+        LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fb729' '-mtune=generic' '-march=x86-64'
+         /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsHqLaW.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_fb729 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. -v CMakeFiles/cmTC_fb729.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o
         collect2 version 9.3.1 20200408 (Red Hat 9.3.1-2)
-        /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/ld -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccdRZBBy.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_735ea /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. -v CMakeFiles/cmTC_735ea.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o
+        /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/ld -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsHqLaW.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_fb729 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. -v CMakeFiles/cmTC_fb729.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o
         GNU ld version 2.32-16.el7
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_735ea' '-mtune=generic' '-march=x86-64'
-        /opt/rh/devtoolset-9/root/usr/bin/gcc  -v -Wl,-v CMakeFiles/cmTC_735ea.dir/CMakeCCompilerABI.c.o -o cmTC_735ea
-        gmake[1]: Leaving directory '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-gPnYL8'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fb729' '-mtune=generic' '-march=x86-64'
+        /opt/rh/devtoolset-9/root/usr/bin/cc  -v -Wl,-v CMakeFiles/cmTC_fb729.dir/CMakeCCompilerABI.c.o -o cmTC_fb729
+        gmake[1]: Leaving directory '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-SoMPkJ'
         
       exitCode: 0
   -
     kind: "message-v1"
     backtrace:
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:191 (message)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Parsed C implicit include dir info: rv=done
         found start of include info
         found start of implicit include info
-          add: [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/include]
           add: [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/include]
           add: [/usr/local/include]
           add: [/opt/rh/devtoolset-9/root/usr/include]
           add: [/usr/include]
         end of search list found
-        collapse include dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/include] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/include]
         collapse include dir [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/include] ==> [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/include]
         collapse include dir [/usr/local/include] ==> [/usr/local/include]
         collapse include dir [/opt/rh/devtoolset-9/root/usr/include] ==> [/opt/rh/devtoolset-9/root/usr/include]
         collapse include dir [/usr/include] ==> [/usr/include]
-        implicit include dirs: [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/include;/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/include;/usr/local/include;/opt/rh/devtoolset-9/root/usr/include;/usr/include]
+        implicit include dirs: [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/include;/usr/local/include;/opt/rh/devtoolset-9/root/usr/include;/usr/include]
       
       
   -
     kind: "message-v1"
     backtrace:
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:227 (message)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Parsed C implicit link information:
-        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-gPnYL8']
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-SoMPkJ']
         ignore line: []
-        ignore line: [Run Build Command(s): /var/lib/snapd/snap/cmake/1437/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-9/root/usr/bin/gmake -f Makefile cmTC_735ea/fast]
-        ignore line: [/opt/rh/devtoolset-9/root/usr/bin/gmake  -f CMakeFiles/cmTC_735ea.dir/build.make CMakeFiles/cmTC_735ea.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-gPnYL8']
-        ignore line: [Building C object CMakeFiles/cmTC_735ea.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/opt/rh/devtoolset-9/root/usr/bin/gcc   -v -o CMakeFiles/cmTC_735ea.dir/CMakeCCompilerABI.c.o -c /var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /var/lib/snapd/snap/cmake/1457/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-9/root/usr/bin/gmake -f Makefile cmTC_fb729/fast]
+        ignore line: [/opt/rh/devtoolset-9/root/usr/bin/gmake  -f CMakeFiles/cmTC_fb729.dir/build.make CMakeFiles/cmTC_fb729.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-SoMPkJ']
+        ignore line: [Building C object CMakeFiles/cmTC_fb729.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/opt/rh/devtoolset-9/root/usr/bin/cc   -v -o CMakeFiles/cmTC_fb729.dir/CMakeCCompilerABI.c.o -c /var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/gcc]
+        ignore line: [COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/cc]
         ignore line: [Target: x86_64-redhat-linux]
         ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c c++ fortran lto --prefix=/opt/rh/devtoolset-9/root/usr --mandir=/opt/rh/devtoolset-9/root/usr/share/man --infodir=/opt/rh/devtoolset-9/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --with-default-libstdcxx-abi=gcc4-compatible --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-9.3.1-20200408/obj-x86_64-redhat-linux/isl-install --disable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
         ignore line: [Thread model: posix]
         ignore line: [gcc version 9.3.1 20200408 (Red Hat 9.3.1-2) (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_735ea.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-        ignore line: [ /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/cc1 -quiet -v /var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_735ea.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccWUOoPt.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fb729.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+        ignore line: [ /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/cc1 -quiet -v /var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_fb729.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccheE7MQ.s]
         ignore line: [GNU C17 (GCC) version 9.3.1 20200408 (Red Hat 9.3.1-2) (x86_64-redhat-linux)]
         ignore line: [	compiled by GNU C version 9.3.1 20200408 (Red Hat 9.3.1-2)  GMP version 6.0.0  MPFR version 3.1.1  MPC version 1.0.1  isl version isl-0.16.1-GMP]
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [ignoring nonexistent directory "/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/include-fixed"]
         ignore line: [ignoring nonexistent directory "/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../x86_64-redhat-linux/include"]
-        ignore line: [ignoring duplicate directory "/usr/local/include"]
-        ignore line: [  as it is a non-system directory that duplicates a system directory]
-        ignore line: [ignoring duplicate directory "/usr/local/include"]
-        ignore line: [  as it is a non-system directory that duplicates a system directory]
-        ignore line: [ignoring duplicate directory "/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/include"]
-        ignore line: [ignoring duplicate directory "/usr/local/include"]
-        ignore line: [  as it is a non-system directory that duplicates a system directory]
-        ignore line: [ignoring duplicate directory "/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/include"]
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
-        ignore line: [ /opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/include]
         ignore line: [ /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/include]
         ignore line: [ /usr/local/include]
         ignore line: [ /opt/rh/devtoolset-9/root/usr/include]
@@ -216,30 +196,30 @@ events:
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: 9052cf03d8b774674ae408635cd5eca1]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_735ea.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-        ignore line: [ /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/as -v --64 -o CMakeFiles/cmTC_735ea.dir/CMakeCCompilerABI.c.o /tmp/ccWUOoPt.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fb729.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+        ignore line: [ /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/as -v --64 -o CMakeFiles/cmTC_fb729.dir/CMakeCCompilerABI.c.o /tmp/ccheE7MQ.s]
         ignore line: [GNU assembler version 2.32 (x86_64-redhat-linux) using BFD version version 2.32-16.el7]
         ignore line: [COMPILER_PATH=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/]
-        ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_735ea.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-        ignore line: [Linking C executable cmTC_735ea]
-        ignore line: [/var/lib/snapd/snap/cmake/1437/bin/cmake -E cmake_link_script CMakeFiles/cmTC_735ea.dir/link.txt --verbose=1]
+        ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fb729.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+        ignore line: [Linking C executable cmTC_fb729]
+        ignore line: [/var/lib/snapd/snap/cmake/1457/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fb729.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/gcc]
+        ignore line: [COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/cc]
         ignore line: [COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper]
         ignore line: [Target: x86_64-redhat-linux]
         ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c c++ fortran lto --prefix=/opt/rh/devtoolset-9/root/usr --mandir=/opt/rh/devtoolset-9/root/usr/share/man --infodir=/opt/rh/devtoolset-9/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --with-default-libstdcxx-abi=gcc4-compatible --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-9.3.1-20200408/obj-x86_64-redhat-linux/isl-install --disable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
         ignore line: [Thread model: posix]
         ignore line: [gcc version 9.3.1 20200408 (Red Hat 9.3.1-2) (GCC) ]
         ignore line: [COMPILER_PATH=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/]
-        ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_735ea' '-mtune=generic' '-march=x86-64']
-        link line: [ /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccdRZBBy.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_735ea /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. -v CMakeFiles/cmTC_735ea.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o]
+        ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fb729' '-mtune=generic' '-march=x86-64']
+        link line: [ /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsHqLaW.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_fb729 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. -v CMakeFiles/cmTC_fb729.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o]
           arg [/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccdRZBBy.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccsHqLaW.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -254,7 +234,7 @@ events:
           arg [-dynamic-linker] ==> ignore
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_735ea] ==> ignore
+          arg [cmTC_fb729] ==> ignore
           arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
           arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
           arg [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o] ==> obj [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o]
@@ -262,15 +242,9 @@ events:
           arg [-L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64] ==> dir [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64]
           arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
           arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
           arg [-L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../..] ==> dir [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../..]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_735ea.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_fb729.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [--push-state] ==> ignore
           arg [--as-needed] ==> ignore
@@ -285,7 +259,7 @@ events:
           arg [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o] ==> obj [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o]
           arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
         ignore line: [collect2 version 9.3.1 20200408 (Red Hat 9.3.1-2)]
-        ignore line: [/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/ld -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccdRZBBy.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_735ea /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. -v CMakeFiles/cmTC_735ea.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o]
+        ignore line: [/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/ld -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsHqLaW.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_fb729 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. -v CMakeFiles/cmTC_fb729.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o]
         linker tool for 'C': /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/ld
         collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
         collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
@@ -294,25 +268,19 @@ events:
         collapse library dir [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64] ==> [/opt/rh/devtoolset-9/root/usr/lib64]
         collapse library dir [/lib/../lib64] ==> [/lib64]
         collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
         collapse library dir [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../..] ==> [/opt/rh/devtoolset-9/root/usr/lib]
         implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
         implicit objs: [/lib64/crt1.o;/lib64/crti.o;/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o;/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o;/lib64/crtn.o]
-        implicit dirs: [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9;/opt/rh/devtoolset-9/root/usr/lib64;/lib64;/usr/lib64;/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin;/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin;/opt/rh/devtoolset-9/root/usr/lib]
+        implicit dirs: [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9;/opt/rh/devtoolset-9/root/usr/lib64;/lib64;/usr/lib64;/opt/rh/devtoolset-9/root/usr/lib]
         implicit fwks: []
       
       
   -
     kind: "message-v1"
     backtrace:
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:264 (cmake_determine_linker_id)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Running the C compiler's linker: "/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/ld" "-v"
@@ -320,14 +288,14 @@ events:
   -
     kind: "try_compile-v1"
     backtrace:
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-XWR7G6"
-      binary: "/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-XWR7G6"
+      source: "/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-LjWtTI"
+      binary: "/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-LjWtTI"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -337,38 +305,29 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-XWR7G6'
+        Change Dir: '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-LjWtTI'
         
-        Run Build Command(s): /var/lib/snapd/snap/cmake/1437/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-9/root/usr/bin/gmake -f Makefile cmTC_5aa85/fast
-        /opt/rh/devtoolset-9/root/usr/bin/gmake  -f CMakeFiles/cmTC_5aa85.dir/build.make CMakeFiles/cmTC_5aa85.dir/build
-        gmake[1]: Entering directory '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-XWR7G6'
-        Building CXX object CMakeFiles/cmTC_5aa85.dir/CMakeCXXCompilerABI.cpp.o
-        /opt/rh/devtoolset-9/root/usr/bin/g++   -v -o CMakeFiles/cmTC_5aa85.dir/CMakeCXXCompilerABI.cpp.o -c /var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /var/lib/snapd/snap/cmake/1457/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-9/root/usr/bin/gmake -f Makefile cmTC_72769/fast
+        /opt/rh/devtoolset-9/root/usr/bin/gmake  -f CMakeFiles/cmTC_72769.dir/build.make CMakeFiles/cmTC_72769.dir/build
+        gmake[1]: Entering directory '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-LjWtTI'
+        Building CXX object CMakeFiles/cmTC_72769.dir/CMakeCXXCompilerABI.cpp.o
+        /opt/rh/devtoolset-9/root/usr/bin/c++   -v -o CMakeFiles/cmTC_72769.dir/CMakeCXXCompilerABI.cpp.o -c /var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
-        COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/g++
+        COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/c++
         Target: x86_64-redhat-linux
         Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-9/root/usr --mandir=/opt/rh/devtoolset-9/root/usr/share/man --infodir=/opt/rh/devtoolset-9/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --with-default-libstdcxx-abi=gcc4-compatible --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-9.3.1-20200408/obj-x86_64-redhat-linux/isl-install --disable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
         Thread model: posix
         gcc version 9.3.1 20200408 (Red Hat 9.3.1-2) (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5aa85.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-         /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/cc1plus -quiet -v -D_GNU_SOURCE /var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_5aa85.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccLo6XAN.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_72769.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/cc1plus -quiet -v -D_GNU_SOURCE /var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_72769.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/cc8Dsq6b.s
         GNU C++14 (GCC) version 9.3.1 20200408 (Red Hat 9.3.1-2) (x86_64-redhat-linux)
         	compiled by GNU C version 9.3.1 20200408 (Red Hat 9.3.1-2), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version isl-0.16.1-GMP
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         ignoring nonexistent directory "/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/include-fixed"
         ignoring nonexistent directory "/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../x86_64-redhat-linux/include"
-        ignoring duplicate directory "/usr/local/include"
-          as it is a non-system directory that duplicates a system directory
-        ignoring duplicate directory "/usr/local/include"
-          as it is a non-system directory that duplicates a system directory
-        ignoring duplicate directory "/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/include"
-        ignoring duplicate directory "/usr/local/include"
-          as it is a non-system directory that duplicates a system directory
-        ignoring duplicate directory "/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/include"
         #include "..." search starts here:
         #include <...> search starts here:
-         /opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/include
          /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../include/c++/9
          /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../include/c++/9/x86_64-redhat-linux
          /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../include/c++/9/backward
@@ -382,44 +341,43 @@ events:
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: ea70bb5a30171067a1b63f040faf459b
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5aa85.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-         /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/as -v --64 -o CMakeFiles/cmTC_5aa85.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccLo6XAN.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_72769.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/as -v --64 -o CMakeFiles/cmTC_72769.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc8Dsq6b.s
         GNU assembler version 2.32 (x86_64-redhat-linux) using BFD version version 2.32-16.el7
         COMPILER_PATH=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/
-        LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5aa85.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-        Linking CXX executable cmTC_5aa85
-        /var/lib/snapd/snap/cmake/1437/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5aa85.dir/link.txt --verbose=1
+        LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_72769.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+        Linking CXX executable cmTC_72769
+        /var/lib/snapd/snap/cmake/1457/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72769.dir/link.txt --verbose=1
         Using built-in specs.
-        COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/g++
+        COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/c++
         COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper
         Target: x86_64-redhat-linux
         Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-9/root/usr --mandir=/opt/rh/devtoolset-9/root/usr/share/man --infodir=/opt/rh/devtoolset-9/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --with-default-libstdcxx-abi=gcc4-compatible --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-9.3.1-20200408/obj-x86_64-redhat-linux/isl-install --disable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
         Thread model: posix
         gcc version 9.3.1 20200408 (Red Hat 9.3.1-2) (GCC) 
         COMPILER_PATH=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/
-        LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5aa85' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-         /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUcjE5R.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_5aa85 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. -v CMakeFiles/cmTC_5aa85.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o
+        LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_72769' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbVQeEg.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_72769 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. -v CMakeFiles/cmTC_72769.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o
         collect2 version 9.3.1 20200408 (Red Hat 9.3.1-2)
-        /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/ld -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUcjE5R.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_5aa85 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. -v CMakeFiles/cmTC_5aa85.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o
+        /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/ld -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbVQeEg.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_72769 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. -v CMakeFiles/cmTC_72769.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o
         GNU ld version 2.32-16.el7
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5aa85' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-        /opt/rh/devtoolset-9/root/usr/bin/g++  -v -Wl,-v CMakeFiles/cmTC_5aa85.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_5aa85
-        gmake[1]: Leaving directory '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-XWR7G6'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_72769' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+        /opt/rh/devtoolset-9/root/usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_72769.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_72769
+        gmake[1]: Leaving directory '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-LjWtTI'
         
       exitCode: 0
   -
     kind: "message-v1"
     backtrace:
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:191 (message)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Parsed CXX implicit include dir info: rv=done
         found start of include info
         found start of implicit include info
-          add: [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/include]
           add: [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../include/c++/9]
           add: [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../include/c++/9/x86_64-redhat-linux]
           add: [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../include/c++/9/backward]
@@ -428,7 +386,6 @@ events:
           add: [/opt/rh/devtoolset-9/root/usr/include]
           add: [/usr/include]
         end of search list found
-        collapse include dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/include] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/include]
         collapse include dir [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../include/c++/9] ==> [/opt/rh/devtoolset-9/root/usr/include/c++/9]
         collapse include dir [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../include/c++/9/x86_64-redhat-linux] ==> [/opt/rh/devtoolset-9/root/usr/include/c++/9/x86_64-redhat-linux]
         collapse include dir [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../include/c++/9/backward] ==> [/opt/rh/devtoolset-9/root/usr/include/c++/9/backward]
@@ -436,51 +393,42 @@ events:
         collapse include dir [/usr/local/include] ==> [/usr/local/include]
         collapse include dir [/opt/rh/devtoolset-9/root/usr/include] ==> [/opt/rh/devtoolset-9/root/usr/include]
         collapse include dir [/usr/include] ==> [/usr/include]
-        implicit include dirs: [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/include;/opt/rh/devtoolset-9/root/usr/include/c++/9;/opt/rh/devtoolset-9/root/usr/include/c++/9/x86_64-redhat-linux;/opt/rh/devtoolset-9/root/usr/include/c++/9/backward;/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/include;/usr/local/include;/opt/rh/devtoolset-9/root/usr/include;/usr/include]
+        implicit include dirs: [/opt/rh/devtoolset-9/root/usr/include/c++/9;/opt/rh/devtoolset-9/root/usr/include/c++/9/x86_64-redhat-linux;/opt/rh/devtoolset-9/root/usr/include/c++/9/backward;/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/include;/usr/local/include;/opt/rh/devtoolset-9/root/usr/include;/usr/include]
       
       
   -
     kind: "message-v1"
     backtrace:
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:227 (message)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Parsed CXX implicit link information:
-        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-XWR7G6']
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-LjWtTI']
         ignore line: []
-        ignore line: [Run Build Command(s): /var/lib/snapd/snap/cmake/1437/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-9/root/usr/bin/gmake -f Makefile cmTC_5aa85/fast]
-        ignore line: [/opt/rh/devtoolset-9/root/usr/bin/gmake  -f CMakeFiles/cmTC_5aa85.dir/build.make CMakeFiles/cmTC_5aa85.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-XWR7G6']
-        ignore line: [Building CXX object CMakeFiles/cmTC_5aa85.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/opt/rh/devtoolset-9/root/usr/bin/g++   -v -o CMakeFiles/cmTC_5aa85.dir/CMakeCXXCompilerABI.cpp.o -c /var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /var/lib/snapd/snap/cmake/1457/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-9/root/usr/bin/gmake -f Makefile cmTC_72769/fast]
+        ignore line: [/opt/rh/devtoolset-9/root/usr/bin/gmake  -f CMakeFiles/cmTC_72769.dir/build.make CMakeFiles/cmTC_72769.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-LjWtTI']
+        ignore line: [Building CXX object CMakeFiles/cmTC_72769.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/opt/rh/devtoolset-9/root/usr/bin/c++   -v -o CMakeFiles/cmTC_72769.dir/CMakeCXXCompilerABI.cpp.o -c /var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/g++]
+        ignore line: [COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/c++]
         ignore line: [Target: x86_64-redhat-linux]
         ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c c++ fortran lto --prefix=/opt/rh/devtoolset-9/root/usr --mandir=/opt/rh/devtoolset-9/root/usr/share/man --infodir=/opt/rh/devtoolset-9/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --with-default-libstdcxx-abi=gcc4-compatible --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-9.3.1-20200408/obj-x86_64-redhat-linux/isl-install --disable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
         ignore line: [Thread model: posix]
         ignore line: [gcc version 9.3.1 20200408 (Red Hat 9.3.1-2) (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5aa85.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-        ignore line: [ /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/cc1plus -quiet -v -D_GNU_SOURCE /var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_5aa85.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccLo6XAN.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_72769.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [ /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/cc1plus -quiet -v -D_GNU_SOURCE /var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_72769.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/cc8Dsq6b.s]
         ignore line: [GNU C++14 (GCC) version 9.3.1 20200408 (Red Hat 9.3.1-2) (x86_64-redhat-linux)]
         ignore line: [	compiled by GNU C version 9.3.1 20200408 (Red Hat 9.3.1-2)  GMP version 6.0.0  MPFR version 3.1.1  MPC version 1.0.1  isl version isl-0.16.1-GMP]
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [ignoring nonexistent directory "/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/include-fixed"]
         ignore line: [ignoring nonexistent directory "/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../x86_64-redhat-linux/include"]
-        ignore line: [ignoring duplicate directory "/usr/local/include"]
-        ignore line: [  as it is a non-system directory that duplicates a system directory]
-        ignore line: [ignoring duplicate directory "/usr/local/include"]
-        ignore line: [  as it is a non-system directory that duplicates a system directory]
-        ignore line: [ignoring duplicate directory "/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/include"]
-        ignore line: [ignoring duplicate directory "/usr/local/include"]
-        ignore line: [  as it is a non-system directory that duplicates a system directory]
-        ignore line: [ignoring duplicate directory "/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/include"]
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
-        ignore line: [ /opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/include]
         ignore line: [ /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../include/c++/9]
         ignore line: [ /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../include/c++/9/x86_64-redhat-linux]
         ignore line: [ /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../include/c++/9/backward]
@@ -494,30 +442,30 @@ events:
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: ea70bb5a30171067a1b63f040faf459b]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5aa85.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-        ignore line: [ /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/as -v --64 -o CMakeFiles/cmTC_5aa85.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccLo6XAN.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_72769.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [ /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/as -v --64 -o CMakeFiles/cmTC_72769.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc8Dsq6b.s]
         ignore line: [GNU assembler version 2.32 (x86_64-redhat-linux) using BFD version version 2.32-16.el7]
         ignore line: [COMPILER_PATH=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/]
-        ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5aa85.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-        ignore line: [Linking CXX executable cmTC_5aa85]
-        ignore line: [/var/lib/snapd/snap/cmake/1437/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5aa85.dir/link.txt --verbose=1]
+        ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_72769.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [Linking CXX executable cmTC_72769]
+        ignore line: [/var/lib/snapd/snap/cmake/1457/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72769.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/g++]
+        ignore line: [COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper]
         ignore line: [Target: x86_64-redhat-linux]
         ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c c++ fortran lto --prefix=/opt/rh/devtoolset-9/root/usr --mandir=/opt/rh/devtoolset-9/root/usr/share/man --infodir=/opt/rh/devtoolset-9/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --with-default-libstdcxx-abi=gcc4-compatible --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-9.3.1-20200408/obj-x86_64-redhat-linux/isl-install --disable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
         ignore line: [Thread model: posix]
         ignore line: [gcc version 9.3.1 20200408 (Red Hat 9.3.1-2) (GCC) ]
         ignore line: [COMPILER_PATH=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/]
-        ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5aa85' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-        link line: [ /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUcjE5R.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_5aa85 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. -v CMakeFiles/cmTC_5aa85.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o]
+        ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_72769' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        link line: [ /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbVQeEg.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_72769 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. -v CMakeFiles/cmTC_72769.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o]
           arg [/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccUcjE5R.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccbVQeEg.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -532,7 +480,7 @@ events:
           arg [-dynamic-linker] ==> ignore
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_5aa85] ==> ignore
+          arg [cmTC_72769] ==> ignore
           arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
           arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
           arg [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o] ==> obj [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o]
@@ -540,15 +488,9 @@ events:
           arg [-L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64] ==> dir [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64]
           arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
           arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
           arg [-L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../..] ==> dir [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../..]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_5aa85.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_72769.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -559,7 +501,7 @@ events:
           arg [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o] ==> obj [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o]
           arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
         ignore line: [collect2 version 9.3.1 20200408 (Red Hat 9.3.1-2)]
-        ignore line: [/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/ld -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUcjE5R.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_5aa85 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. -v CMakeFiles/cmTC_5aa85.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o]
+        ignore line: [/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/ld -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbVQeEg.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_72769 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. -v CMakeFiles/cmTC_72769.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o]
         linker tool for 'CXX': /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/ld
         collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
         collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
@@ -568,25 +510,19 @@ events:
         collapse library dir [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64] ==> [/opt/rh/devtoolset-9/root/usr/lib64]
         collapse library dir [/lib/../lib64] ==> [/lib64]
         collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
         collapse library dir [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../..] ==> [/opt/rh/devtoolset-9/root/usr/lib]
         implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
         implicit objs: [/lib64/crt1.o;/lib64/crti.o;/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o;/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o;/lib64/crtn.o]
-        implicit dirs: [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9;/opt/rh/devtoolset-9/root/usr/lib64;/lib64;/usr/lib64;/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin;/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin;/opt/rh/devtoolset-9/root/usr/lib]
+        implicit dirs: [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9;/opt/rh/devtoolset-9/root/usr/lib64;/lib64;/usr/lib64;/opt/rh/devtoolset-9/root/usr/lib]
         implicit fwks: []
       
       
   -
     kind: "message-v1"
     backtrace:
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:264 (cmake_determine_linker_id)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Running the CXX compiler's linker: "/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/ld" "-v"
@@ -594,83 +530,83 @@ events:
   -
     kind: "try_compile-v1"
     backtrace:
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/FindOpenMP.cmake:252 (try_compile)"
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/FindOpenMP.cmake:522 (_OPENMP_GET_FLAGS)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
       - "CMakeLists.txt:8 (find_package)"
     description: "Detecting C OpenMP compiler info"
     directories:
-      source: "/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-4wbxU5"
-      binary: "/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-4wbxU5"
+      source: "/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-Pa7xyJ"
+      binary: "/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-Pa7xyJ"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "/home/wanghui/gre/destool/cmake"
+      CMAKE_MODULE_PATH: "/home/wanghui/gre/liftol/cmake"
     buildResult:
       variable: "OpenMP_COMPILE_RESULT_C_fopenmp"
       cached: true
       stdout: |
-        Change Dir: '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-4wbxU5'
+        Change Dir: '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-Pa7xyJ'
         
-        Run Build Command(s): /var/lib/snapd/snap/cmake/1437/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-9/root/usr/bin/gmake -f Makefile cmTC_c0ffe/fast
-        /opt/rh/devtoolset-9/root/usr/bin/gmake  -f CMakeFiles/cmTC_c0ffe.dir/build.make CMakeFiles/cmTC_c0ffe.dir/build
-        gmake[1]: Entering directory '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-4wbxU5'
-        Building C object CMakeFiles/cmTC_c0ffe.dir/OpenMPTryFlag.c.o
-        /opt/rh/devtoolset-9/root/usr/bin/gcc   -fopenmp -o CMakeFiles/cmTC_c0ffe.dir/OpenMPTryFlag.c.o -c /home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-4wbxU5/OpenMPTryFlag.c
-        Linking C executable cmTC_c0ffe
-        /var/lib/snapd/snap/cmake/1437/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c0ffe.dir/link.txt --verbose=1
+        Run Build Command(s): /var/lib/snapd/snap/cmake/1457/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-9/root/usr/bin/gmake -f Makefile cmTC_76dac/fast
+        /opt/rh/devtoolset-9/root/usr/bin/gmake  -f CMakeFiles/cmTC_76dac.dir/build.make CMakeFiles/cmTC_76dac.dir/build
+        gmake[1]: Entering directory '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-Pa7xyJ'
+        Building C object CMakeFiles/cmTC_76dac.dir/OpenMPTryFlag.c.o
+        /opt/rh/devtoolset-9/root/usr/bin/cc   -fopenmp -o CMakeFiles/cmTC_76dac.dir/OpenMPTryFlag.c.o -c /home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-Pa7xyJ/OpenMPTryFlag.c
+        Linking C executable cmTC_76dac
+        /var/lib/snapd/snap/cmake/1457/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76dac.dir/link.txt --verbose=1
         Using built-in specs.
-        COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/gcc
+        COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/cc
         COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper
         Target: x86_64-redhat-linux
         Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-9/root/usr --mandir=/opt/rh/devtoolset-9/root/usr/share/man --infodir=/opt/rh/devtoolset-9/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --with-default-libstdcxx-abi=gcc4-compatible --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-9.3.1-20200408/obj-x86_64-redhat-linux/isl-install --disable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
         Thread model: posix
         gcc version 9.3.1 20200408 (Red Hat 9.3.1-2) (GCC) 
         COMPILER_PATH=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/
-        LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/
+        LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/
         Reading specs from /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/libgomp.spec
-        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_c0ffe' '-mtune=generic' '-march=x86-64' '-pthread'
-         /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0Ygkd7.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_c0ffe /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. CMakeFiles/cmTC_c0ffe.dir/OpenMPTryFlag.c.o -lgomp -lgcc --push-state --as-needed -lgcc_s --pop-state -lpthread -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o
-        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_c0ffe' '-mtune=generic' '-march=x86-64' '-pthread'
-        /opt/rh/devtoolset-9/root/usr/bin/gcc  -fopenmp -v CMakeFiles/cmTC_c0ffe.dir/OpenMPTryFlag.c.o -o cmTC_c0ffe
-        gmake[1]: Leaving directory '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-4wbxU5'
+        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_76dac' '-mtune=generic' '-march=x86-64' '-pthread'
+         /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccx21rrq.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_76dac /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. CMakeFiles/cmTC_76dac.dir/OpenMPTryFlag.c.o -lgomp -lgcc --push-state --as-needed -lgcc_s --pop-state -lpthread -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_76dac' '-mtune=generic' '-march=x86-64' '-pthread'
+        /opt/rh/devtoolset-9/root/usr/bin/cc  -fopenmp -v CMakeFiles/cmTC_76dac.dir/OpenMPTryFlag.c.o -o cmTC_76dac
+        gmake[1]: Leaving directory '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-Pa7xyJ'
         
       exitCode: 0
   -
     kind: "message-v1"
     backtrace:
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/FindOpenMP.cmake:296 (message)"
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/FindOpenMP.cmake:522 (_OPENMP_GET_FLAGS)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/FindOpenMP.cmake:294 (message)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
       - "CMakeLists.txt:8 (find_package)"
     message: |
       Parsed C OpenMP implicit link information from above output:
-        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-4wbxU5']
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-Pa7xyJ']
         ignore line: []
-        ignore line: [Run Build Command(s): /var/lib/snapd/snap/cmake/1437/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-9/root/usr/bin/gmake -f Makefile cmTC_c0ffe/fast]
-        ignore line: [/opt/rh/devtoolset-9/root/usr/bin/gmake  -f CMakeFiles/cmTC_c0ffe.dir/build.make CMakeFiles/cmTC_c0ffe.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-4wbxU5']
-        ignore line: [Building C object CMakeFiles/cmTC_c0ffe.dir/OpenMPTryFlag.c.o]
-        ignore line: [/opt/rh/devtoolset-9/root/usr/bin/gcc   -fopenmp -o CMakeFiles/cmTC_c0ffe.dir/OpenMPTryFlag.c.o -c /home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-4wbxU5/OpenMPTryFlag.c]
-        ignore line: [Linking C executable cmTC_c0ffe]
-        ignore line: [/var/lib/snapd/snap/cmake/1437/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c0ffe.dir/link.txt --verbose=1]
+        ignore line: [Run Build Command(s): /var/lib/snapd/snap/cmake/1457/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-9/root/usr/bin/gmake -f Makefile cmTC_76dac/fast]
+        ignore line: [/opt/rh/devtoolset-9/root/usr/bin/gmake  -f CMakeFiles/cmTC_76dac.dir/build.make CMakeFiles/cmTC_76dac.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-Pa7xyJ']
+        ignore line: [Building C object CMakeFiles/cmTC_76dac.dir/OpenMPTryFlag.c.o]
+        ignore line: [/opt/rh/devtoolset-9/root/usr/bin/cc   -fopenmp -o CMakeFiles/cmTC_76dac.dir/OpenMPTryFlag.c.o -c /home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-Pa7xyJ/OpenMPTryFlag.c]
+        ignore line: [Linking C executable cmTC_76dac]
+        ignore line: [/var/lib/snapd/snap/cmake/1457/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76dac.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/gcc]
+        ignore line: [COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/cc]
         ignore line: [COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper]
         ignore line: [Target: x86_64-redhat-linux]
         ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c c++ fortran lto --prefix=/opt/rh/devtoolset-9/root/usr --mandir=/opt/rh/devtoolset-9/root/usr/share/man --infodir=/opt/rh/devtoolset-9/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --with-default-libstdcxx-abi=gcc4-compatible --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-9.3.1-20200408/obj-x86_64-redhat-linux/isl-install --disable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
         ignore line: [Thread model: posix]
         ignore line: [gcc version 9.3.1 20200408 (Red Hat 9.3.1-2) (GCC) ]
         ignore line: [COMPILER_PATH=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/]
-        ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/]
+        ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/]
         ignore line: [Reading specs from /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/libgomp.spec]
-        ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_c0ffe' '-mtune=generic' '-march=x86-64' '-pthread']
-        link line: [ /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0Ygkd7.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_c0ffe /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. CMakeFiles/cmTC_c0ffe.dir/OpenMPTryFlag.c.o -lgomp -lgcc --push-state --as-needed -lgcc_s --pop-state -lpthread -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_76dac' '-mtune=generic' '-march=x86-64' '-pthread']
+        link line: [ /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccx21rrq.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_76dac /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. CMakeFiles/cmTC_76dac.dir/OpenMPTryFlag.c.o -lgomp -lgcc --push-state --as-needed -lgcc_s --pop-state -lpthread -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o]
           arg [/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/cc0Ygkd7.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccx21rrq.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lpthread] ==> ignore
@@ -686,19 +622,13 @@ events:
           arg [-dynamic-linker] ==> ignore
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_c0ffe] ==> ignore
+          arg [cmTC_76dac] ==> ignore
           arg [-L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9] ==> dir [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9]
           arg [-L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64] ==> dir [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64]
           arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
           arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
           arg [-L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../..] ==> dir [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../..]
-          arg [CMakeFiles/cmTC_c0ffe.dir/OpenMPTryFlag.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_76dac.dir/OpenMPTryFlag.c.o] ==> ignore
           arg [-lgomp] ==> lib [gomp]
           arg [-lgcc] ==> lib [gcc]
           arg [--push-state] ==> ignore
@@ -716,99 +646,93 @@ events:
         collapse library dir [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64] ==> [/opt/rh/devtoolset-9/root/usr/lib64]
         collapse library dir [/lib/../lib64] ==> [/lib64]
         collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
         collapse library dir [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../..] ==> [/opt/rh/devtoolset-9/root/usr/lib]
         implicit libs: [gomp;gcc;gcc_s;pthread;c;gcc;gcc_s]
         implicit objs: []
-        implicit dirs: [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9;/opt/rh/devtoolset-9/root/usr/lib64;/lib64;/usr/lib64;/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin;/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin;/opt/rh/devtoolset-9/root/usr/lib]
+        implicit dirs: [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9;/opt/rh/devtoolset-9/root/usr/lib64;/lib64;/usr/lib64;/opt/rh/devtoolset-9/root/usr/lib]
         implicit fwks: []
       
       
   -
     kind: "try_compile-v1"
     backtrace:
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/FindOpenMP.cmake:252 (try_compile)"
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/FindOpenMP.cmake:522 (_OPENMP_GET_FLAGS)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
       - "CMakeLists.txt:8 (find_package)"
     description: "Detecting CXX OpenMP compiler info"
     directories:
-      source: "/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-FwN4t7"
-      binary: "/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-FwN4t7"
+      source: "/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-NRcCQL"
+      binary: "/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-NRcCQL"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "/home/wanghui/gre/destool/cmake"
+      CMAKE_MODULE_PATH: "/home/wanghui/gre/liftol/cmake"
     buildResult:
       variable: "OpenMP_COMPILE_RESULT_CXX_fopenmp"
       cached: true
       stdout: |
-        Change Dir: '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-FwN4t7'
+        Change Dir: '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-NRcCQL'
         
-        Run Build Command(s): /var/lib/snapd/snap/cmake/1437/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-9/root/usr/bin/gmake -f Makefile cmTC_f98cc/fast
-        /opt/rh/devtoolset-9/root/usr/bin/gmake  -f CMakeFiles/cmTC_f98cc.dir/build.make CMakeFiles/cmTC_f98cc.dir/build
-        gmake[1]: Entering directory '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-FwN4t7'
-        Building CXX object CMakeFiles/cmTC_f98cc.dir/OpenMPTryFlag.cpp.o
-        /opt/rh/devtoolset-9/root/usr/bin/g++   -fopenmp -o CMakeFiles/cmTC_f98cc.dir/OpenMPTryFlag.cpp.o -c /home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-FwN4t7/OpenMPTryFlag.cpp
-        Linking CXX executable cmTC_f98cc
-        /var/lib/snapd/snap/cmake/1437/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f98cc.dir/link.txt --verbose=1
+        Run Build Command(s): /var/lib/snapd/snap/cmake/1457/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-9/root/usr/bin/gmake -f Makefile cmTC_7224f/fast
+        /opt/rh/devtoolset-9/root/usr/bin/gmake  -f CMakeFiles/cmTC_7224f.dir/build.make CMakeFiles/cmTC_7224f.dir/build
+        gmake[1]: Entering directory '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-NRcCQL'
+        Building CXX object CMakeFiles/cmTC_7224f.dir/OpenMPTryFlag.cpp.o
+        /opt/rh/devtoolset-9/root/usr/bin/c++   -fopenmp -o CMakeFiles/cmTC_7224f.dir/OpenMPTryFlag.cpp.o -c /home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-NRcCQL/OpenMPTryFlag.cpp
+        Linking CXX executable cmTC_7224f
+        /var/lib/snapd/snap/cmake/1457/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7224f.dir/link.txt --verbose=1
         Using built-in specs.
-        COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/g++
+        COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/c++
         COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper
         Target: x86_64-redhat-linux
         Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-9/root/usr --mandir=/opt/rh/devtoolset-9/root/usr/share/man --infodir=/opt/rh/devtoolset-9/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --with-default-libstdcxx-abi=gcc4-compatible --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-9.3.1-20200408/obj-x86_64-redhat-linux/isl-install --disable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
         Thread model: posix
         gcc version 9.3.1 20200408 (Red Hat 9.3.1-2) (GCC) 
         COMPILER_PATH=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/
-        LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/
+        LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/
         Reading specs from /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/libgomp.spec
-        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_f98cc' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread'
-         /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cc7RajZn.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f98cc /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. CMakeFiles/cmTC_f98cc.dir/OpenMPTryFlag.cpp.o -lstdc++ -lm -lgomp -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o
-        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_f98cc' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread'
-        /opt/rh/devtoolset-9/root/usr/bin/g++  -fopenmp -v CMakeFiles/cmTC_f98cc.dir/OpenMPTryFlag.cpp.o -o cmTC_f98cc
-        gmake[1]: Leaving directory '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-FwN4t7'
+        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_7224f' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread'
+         /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cclI8NsI.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_7224f /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. CMakeFiles/cmTC_7224f.dir/OpenMPTryFlag.cpp.o -lstdc++ -lm -lgomp -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_7224f' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread'
+        /opt/rh/devtoolset-9/root/usr/bin/c++  -fopenmp -v CMakeFiles/cmTC_7224f.dir/OpenMPTryFlag.cpp.o -o cmTC_7224f
+        gmake[1]: Leaving directory '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-NRcCQL'
         
       exitCode: 0
   -
     kind: "message-v1"
     backtrace:
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/FindOpenMP.cmake:296 (message)"
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/FindOpenMP.cmake:522 (_OPENMP_GET_FLAGS)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/FindOpenMP.cmake:294 (message)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
       - "CMakeLists.txt:8 (find_package)"
     message: |
       Parsed CXX OpenMP implicit link information from above output:
-        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-FwN4t7']
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-NRcCQL']
         ignore line: []
-        ignore line: [Run Build Command(s): /var/lib/snapd/snap/cmake/1437/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-9/root/usr/bin/gmake -f Makefile cmTC_f98cc/fast]
-        ignore line: [/opt/rh/devtoolset-9/root/usr/bin/gmake  -f CMakeFiles/cmTC_f98cc.dir/build.make CMakeFiles/cmTC_f98cc.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-FwN4t7']
-        ignore line: [Building CXX object CMakeFiles/cmTC_f98cc.dir/OpenMPTryFlag.cpp.o]
-        ignore line: [/opt/rh/devtoolset-9/root/usr/bin/g++   -fopenmp -o CMakeFiles/cmTC_f98cc.dir/OpenMPTryFlag.cpp.o -c /home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-FwN4t7/OpenMPTryFlag.cpp]
-        ignore line: [Linking CXX executable cmTC_f98cc]
-        ignore line: [/var/lib/snapd/snap/cmake/1437/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f98cc.dir/link.txt --verbose=1]
+        ignore line: [Run Build Command(s): /var/lib/snapd/snap/cmake/1457/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-9/root/usr/bin/gmake -f Makefile cmTC_7224f/fast]
+        ignore line: [/opt/rh/devtoolset-9/root/usr/bin/gmake  -f CMakeFiles/cmTC_7224f.dir/build.make CMakeFiles/cmTC_7224f.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-NRcCQL']
+        ignore line: [Building CXX object CMakeFiles/cmTC_7224f.dir/OpenMPTryFlag.cpp.o]
+        ignore line: [/opt/rh/devtoolset-9/root/usr/bin/c++   -fopenmp -o CMakeFiles/cmTC_7224f.dir/OpenMPTryFlag.cpp.o -c /home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-NRcCQL/OpenMPTryFlag.cpp]
+        ignore line: [Linking CXX executable cmTC_7224f]
+        ignore line: [/var/lib/snapd/snap/cmake/1457/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7224f.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/g++]
+        ignore line: [COLLECT_GCC=/opt/rh/devtoolset-9/root/usr/bin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper]
         ignore line: [Target: x86_64-redhat-linux]
         ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c c++ fortran lto --prefix=/opt/rh/devtoolset-9/root/usr --mandir=/opt/rh/devtoolset-9/root/usr/share/man --infodir=/opt/rh/devtoolset-9/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --with-default-libstdcxx-abi=gcc4-compatible --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-9.3.1-20200408/obj-x86_64-redhat-linux/isl-install --disable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
         ignore line: [Thread model: posix]
         ignore line: [gcc version 9.3.1 20200408 (Red Hat 9.3.1-2) (GCC) ]
         ignore line: [COMPILER_PATH=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/]
-        ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/]
+        ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/]
         ignore line: [Reading specs from /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/libgomp.spec]
-        ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_f98cc' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread']
-        link line: [ /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cc7RajZn.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f98cc /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. CMakeFiles/cmTC_f98cc.dir/OpenMPTryFlag.cpp.o -lstdc++ -lm -lgomp -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_7224f' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread']
+        link line: [ /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cclI8NsI.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_7224f /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../.. CMakeFiles/cmTC_7224f.dir/OpenMPTryFlag.cpp.o -lstdc++ -lm -lgomp -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /lib/../lib64/crtn.o]
           arg [/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/cc7RajZn.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cclI8NsI.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lpthread] ==> ignore
@@ -824,19 +748,13 @@ events:
           arg [-dynamic-linker] ==> ignore
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_f98cc] ==> ignore
+          arg [cmTC_7224f] ==> ignore
           arg [-L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9] ==> dir [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9]
           arg [-L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64] ==> dir [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64]
           arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
           arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-          arg [-L/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
           arg [-L/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../..] ==> dir [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../..]
-          arg [CMakeFiles/cmTC_f98cc.dir/OpenMPTryFlag.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_7224f.dir/OpenMPTryFlag.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgomp] ==> lib [gomp]
@@ -850,81 +768,75 @@ events:
         collapse library dir [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64] ==> [/opt/rh/devtoolset-9/root/usr/lib64]
         collapse library dir [/lib/../lib64] ==> [/lib64]
         collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
-        collapse library dir [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
         collapse library dir [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9/../../..] ==> [/opt/rh/devtoolset-9/root/usr/lib]
         implicit libs: [stdc++;m;gomp;gcc_s;gcc;pthread;c;gcc_s;gcc]
         implicit objs: []
-        implicit dirs: [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9;/opt/rh/devtoolset-9/root/usr/lib64;/lib64;/usr/lib64;/opt/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin;/opt/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin;/opt/rh/devtoolset-9/root/usr/lib]
+        implicit dirs: [/opt/rh/devtoolset-9/root/usr/lib/gcc/x86_64-redhat-linux/9;/opt/rh/devtoolset-9/root/usr/lib64;/lib64;/usr/lib64;/opt/rh/devtoolset-9/root/usr/lib]
         implicit fwks: []
       
       
   -
     kind: "try_compile-v1"
     backtrace:
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/FindOpenMP.cmake:456 (try_compile)"
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/FindOpenMP.cmake:596 (_OPENMP_GET_SPEC_DATE)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/FindOpenMP.cmake:491 (try_compile)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/FindOpenMP.cmake:631 (_OPENMP_GET_SPEC_DATE)"
       - "CMakeLists.txt:8 (find_package)"
     description: "Detecting C OpenMP version"
     directories:
-      source: "/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-VscM66"
-      binary: "/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-VscM66"
+      source: "/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-2jTfxI"
+      binary: "/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-2jTfxI"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "/home/wanghui/gre/destool/cmake"
+      CMAKE_MODULE_PATH: "/home/wanghui/gre/liftol/cmake"
     buildResult:
       variable: "OpenMP_SPECTEST_C_"
       cached: true
       stdout: |
-        Change Dir: '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-VscM66'
+        Change Dir: '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-2jTfxI'
         
-        Run Build Command(s): /var/lib/snapd/snap/cmake/1437/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-9/root/usr/bin/gmake -f Makefile cmTC_cc9ea/fast
-        /opt/rh/devtoolset-9/root/usr/bin/gmake  -f CMakeFiles/cmTC_cc9ea.dir/build.make CMakeFiles/cmTC_cc9ea.dir/build
-        gmake[1]: Entering directory '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-VscM66'
-        Building C object CMakeFiles/cmTC_cc9ea.dir/OpenMPCheckVersion.c.o
-        /opt/rh/devtoolset-9/root/usr/bin/gcc   -fopenmp -o CMakeFiles/cmTC_cc9ea.dir/OpenMPCheckVersion.c.o -c /home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-VscM66/OpenMPCheckVersion.c
-        Linking C executable cmTC_cc9ea
-        /var/lib/snapd/snap/cmake/1437/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cc9ea.dir/link.txt --verbose=1
-        /opt/rh/devtoolset-9/root/usr/bin/gcc  -fopenmp CMakeFiles/cmTC_cc9ea.dir/OpenMPCheckVersion.c.o -o cmTC_cc9ea
-        gmake[1]: Leaving directory '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-VscM66'
+        Run Build Command(s): /var/lib/snapd/snap/cmake/1457/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-9/root/usr/bin/gmake -f Makefile cmTC_bb8d7/fast
+        /opt/rh/devtoolset-9/root/usr/bin/gmake  -f CMakeFiles/cmTC_bb8d7.dir/build.make CMakeFiles/cmTC_bb8d7.dir/build
+        gmake[1]: Entering directory '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-2jTfxI'
+        Building C object CMakeFiles/cmTC_bb8d7.dir/OpenMPCheckVersion.c.o
+        /opt/rh/devtoolset-9/root/usr/bin/cc   -fopenmp -o CMakeFiles/cmTC_bb8d7.dir/OpenMPCheckVersion.c.o -c /home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-2jTfxI/OpenMPCheckVersion.c
+        Linking C executable cmTC_bb8d7
+        /var/lib/snapd/snap/cmake/1457/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb8d7.dir/link.txt --verbose=1
+        /opt/rh/devtoolset-9/root/usr/bin/cc  -fopenmp CMakeFiles/cmTC_bb8d7.dir/OpenMPCheckVersion.c.o -o cmTC_bb8d7
+        gmake[1]: Leaving directory '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-2jTfxI'
         
       exitCode: 0
   -
     kind: "try_compile-v1"
     backtrace:
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/FindOpenMP.cmake:456 (try_compile)"
-      - "/var/lib/snapd/snap/cmake/1437/share/cmake-3.31/Modules/FindOpenMP.cmake:596 (_OPENMP_GET_SPEC_DATE)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/FindOpenMP.cmake:491 (try_compile)"
+      - "/var/lib/snapd/snap/cmake/1457/share/cmake-4.0/Modules/FindOpenMP.cmake:631 (_OPENMP_GET_SPEC_DATE)"
       - "CMakeLists.txt:8 (find_package)"
     description: "Detecting CXX OpenMP version"
     directories:
-      source: "/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-jCejr7"
-      binary: "/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-jCejr7"
+      source: "/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-gZy5yJ"
+      binary: "/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-gZy5yJ"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "/home/wanghui/gre/destool/cmake"
+      CMAKE_MODULE_PATH: "/home/wanghui/gre/liftol/cmake"
     buildResult:
       variable: "OpenMP_SPECTEST_CXX_"
       cached: true
       stdout: |
-        Change Dir: '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-jCejr7'
+        Change Dir: '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-gZy5yJ'
         
-        Run Build Command(s): /var/lib/snapd/snap/cmake/1437/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-9/root/usr/bin/gmake -f Makefile cmTC_90c18/fast
-        /opt/rh/devtoolset-9/root/usr/bin/gmake  -f CMakeFiles/cmTC_90c18.dir/build.make CMakeFiles/cmTC_90c18.dir/build
-        gmake[1]: Entering directory '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-jCejr7'
-        Building CXX object CMakeFiles/cmTC_90c18.dir/OpenMPCheckVersion.cpp.o
-        /opt/rh/devtoolset-9/root/usr/bin/g++   -fopenmp -o CMakeFiles/cmTC_90c18.dir/OpenMPCheckVersion.cpp.o -c /home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-jCejr7/OpenMPCheckVersion.cpp
-        Linking CXX executable cmTC_90c18
-        /var/lib/snapd/snap/cmake/1437/bin/cmake -E cmake_link_script CMakeFiles/cmTC_90c18.dir/link.txt --verbose=1
-        /opt/rh/devtoolset-9/root/usr/bin/g++  -fopenmp CMakeFiles/cmTC_90c18.dir/OpenMPCheckVersion.cpp.o -o cmTC_90c18
-        gmake[1]: Leaving directory '/home/wanghui/gre/destool/build/CMakeFiles/CMakeScratch/TryCompile-jCejr7'
+        Run Build Command(s): /var/lib/snapd/snap/cmake/1457/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-9/root/usr/bin/gmake -f Makefile cmTC_51341/fast
+        /opt/rh/devtoolset-9/root/usr/bin/gmake  -f CMakeFiles/cmTC_51341.dir/build.make CMakeFiles/cmTC_51341.dir/build
+        gmake[1]: Entering directory '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-gZy5yJ'
+        Building CXX object CMakeFiles/cmTC_51341.dir/OpenMPCheckVersion.cpp.o
+        /opt/rh/devtoolset-9/root/usr/bin/c++   -fopenmp -o CMakeFiles/cmTC_51341.dir/OpenMPCheckVersion.cpp.o -c /home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-gZy5yJ/OpenMPCheckVersion.cpp
+        Linking CXX executable cmTC_51341
+        /var/lib/snapd/snap/cmake/1457/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51341.dir/link.txt --verbose=1
+        /opt/rh/devtoolset-9/root/usr/bin/c++  -fopenmp CMakeFiles/cmTC_51341.dir/OpenMPCheckVersion.cpp.o -o cmTC_51341
+        gmake[1]: Leaving directory '/home/wanghui/gre/liftol/build/CMakeFiles/CMakeScratch/TryCompile-gZy5yJ'
         
       exitCode: 0
 ...

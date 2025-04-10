@@ -1,9 +1,9 @@
-# DESTOOL (Updating)
+# LIFTOL (Updating)
 
 
 Thanks for all of you for your interest in our work.
 
-This project contains the code of DESTOOL and welcomes contributions or suggestions.
+This project contains the code of LIFTOL and welcomes contributions or suggestions.
 
 ## Compile & Run
 
@@ -17,36 +17,36 @@ make
 - Run example:
 
 ```bash
-./build/example_destool
+./build/example_liftol
 ```
 
 
 ## Usage
 
-`src/examples/example_destool.cpp` demonstrates the usage of DESTO:
+`src/examples/example_liftol.cpp` demonstrates the usage of LIFT:
 
 
 ```bash
 #include <iostream>
-#include <desto.h>
+#include <lift.h>
 
 using namespace std;
 
 int main() {
-  destool::LIPP <int, int> destool;
+  liftol::LIPP <int, int> liftol;
   int key_num = 1000;
   pair<int, int> *keys = new pair<int, int>[key_num];
   for (int i = 0; i < 1000; i++) {
     keys[i]={i,i};
   }
-  destool.bulk_load(keys, 1000);
+  liftol.bulk_load(keys, 1000);
 
   for (int i = 1000; i < 2000; i++) {
-    destool.insert(i,i);
+    liftol.insert(i,i);
   }
   for (int i = 0; i < 2000; i++) {
     bool exist;
-    auto result = destool.at(i, false, exist);
+    auto result = liftol.at(i, false, exist);
     if (exist) {
         std::cout << "value at " << i << ": " << result << std::endl;
     } else {
@@ -61,7 +61,7 @@ int main() {
 ## Running benchmark
 
 
-DESTOOL's performance can be assessed using the GRE benchmarking tool. We have integrated DESTOOL into GRE as "[GRE_DESTOOL](https://github.com/WangHui025/GRE_DESTO)", which is a fork of GRE. In GRE_DESTOOL, you can assess the performance of DESTOOL comprehensively.
+LIFTOL's performance can be assessed using the GRE benchmarking tool. We have integrated LIFTOL into GRE as "[GRE_LIFTOL](https://github.com/WangHui025/GRE_LIFT)", which is a fork of GRE. In GRE_LIFTOL, you can assess the performance of LIFTOL comprehensively.
 
 
 ## License

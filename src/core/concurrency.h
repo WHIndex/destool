@@ -1,5 +1,5 @@
-#ifndef __DESTOOL_CC_H__
-#define __DESTOOL_CC_H__
+#ifndef __LIFTOL_CC_H__
+#define __LIFTOL_CC_H__
 
 #pragma once
 
@@ -8,7 +8,7 @@
 #include <immintrin.h>
 #include <sched.h>
 
-namespace destool {
+namespace liftol {
   
   template<typename T>
   void atomic_add(std::atomic <T> &target, T operand) {

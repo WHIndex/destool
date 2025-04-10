@@ -1,12 +1,12 @@
-#ifndef __DESTOOL_BASE_H__
-#define __DESTOOL_BASE_H__
+#ifndef __LIFTOL_BASE_H__
+#define __LIFTOL_BASE_H__
 
 #include <limits>
 #include <cmath>
 #include <cstdlib>
 #include <algorithm>
 
-namespace destool {
+namespace liftol {
 
 // Linear regression model
 template <class T>
@@ -31,6 +31,6 @@ public:
     }
 };
 
-#endif // __DESTOOL_BASE_H__
+#endif // __LIFTOL_BASE_H__
 
 }

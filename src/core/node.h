@@ -17,7 +17,7 @@
 
 #define USE_LZCNT 1
 
-namespace destool::lnode {
+namespace liftol::lnode {
 
 template <class T, class P>
 class LNode {
