@@ -61,7 +61,7 @@ int main() {
 ## Running benchmark
 
 
-LIFTOL's performance can be assessed using the GRE benchmarking tool. We have integrated LIFTOL into GRE as "[GRE_LIFTOL](https://github.com/WangHui025/GRE_LIFT)", which is a fork of GRE. In GRE_LIFTOL, you can assess the performance of LIFTOL comprehensively.
+LIFTOL's performance can be assessed using the GRE benchmarking tool. We have integrated LIFTOL into GRE as "[GRE_LIFTOL](https://github.com/WHIndex/GRE_LIFT)", which is a fork of GRE. In GRE_LIFTOL, you can assess the performance of LIFTOL comprehensively.
 
 
 ## License
