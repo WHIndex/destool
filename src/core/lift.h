@@ -74,9 +74,9 @@ typedef void (*dealloc_func)(void *ptr);
 #endif
 
 template<class T, class P, bool USE_FMCD = true>
-class LIPP
+class LIFT
 {
-    static_assert(std::is_arithmetic<T>::value, "LIPP key type must be numeric.");
+    static_assert(std::is_arithmetic<T>::value, "LIFT key type must be numeric.");
 
     inline int compute_gap_count(int size) {
         // if (size >= 1000000) return 1;
@@ -121,10 +121,10 @@ public:
         std::atomic<uint32_t> mLocalEpoch;
         uint32_t mPreviouslyAccessedEpoch;
         bool mThreadWantsToAdvance;
-        LIPP<T, P> *tree; 
+        LIFT<T, P> *tree; 
 
     public:
-        ThreadSpecificEpochBasedReclamationInformation(LIPP<T, P> *index)
+        ThreadSpecificEpochBasedReclamationInformation(LIFT<T, P> *index)
             : mFreeLists(), mLocalEpoch(3), mPreviouslyAccessedEpoch(3),
             mThreadWantsToAdvance(false), tree(index) {}
 
@@ -201,11 +201,11 @@ public:
             mThreadSpecificInformations;
 
     private:
-        EpochBasedMemoryReclamationStrategy(LIPP<T, P> *index)
+        EpochBasedMemoryReclamationStrategy(LIFT<T, P> *index)
             : mCurrentEpoch(0), mThreadSpecificInformations(index) {}
 
     public:
-        static EpochBasedMemoryReclamationStrategy *getInstance(LIPP<T, P> *index) {
+        static EpochBasedMemoryReclamationStrategy *getInstance(LIFT<T, P> *index) {
             static EpochBasedMemoryReclamationStrategy instance(index);
             return &instance;
         }
@@ -256,7 +256,7 @@ public:
         EpochBasedMemoryReclamationStrategy *instance;
 
     public:
-        EpochGuard(LIPP<T, P> *index) {
+        EpochGuard(LIFT<T, P> *index) {
             // std::cout << "Entering EpochGuard constructor: " << index << std::endl; //index确定是一样的
             instance = EpochBasedMemoryReclamationStrategy::getInstance(index);
             // if (instance == nullptr) {
@@ -292,7 +292,7 @@ public:
     };
     DerivedParams derived_params_;
 
-    LIPP(double BUILD_LR_REMAIN = 0, bool QUIET = true)
+    LIFT(double BUILD_LR_REMAIN = 0, bool QUIET = true)
         : BUILD_LR_REMAIN(BUILD_LR_REMAIN), QUIET(QUIET) {
         {
             std::vector<Node*> nodes;
@@ -314,7 +314,7 @@ public:
         root = build_tree_none();
         ebr = EpochBasedMemoryReclamationStrategy::getInstance(this);
     }
-    ~LIPP() {
+    ~LIFT() {
         destroy_tree(root);
         root = NULL;
         destory_pending();
@@ -1294,7 +1294,7 @@ private:
 
     /// bulk build, _keys must be sorted in asc order.
     /// FMCD method.
-    //原本的lipp的构造方法
+    //原本的LIFT的构造方法
     Node* build_tree_bulk_fmcd(T* _keys, P* _values, int _size)
     {
         RT_ASSERT(_size > 1);

@@ -33,7 +33,7 @@ make
 using namespace std;
 
 int main() {
-  liftol::LIPP <int, int> liftol;
+  liftol::LIFT <int, int> liftol;
   int key_num = 1000;
   pair<int, int> *keys = new pair<int, int>[key_num];
   for (int i = 0; i < 1000; i++) {
